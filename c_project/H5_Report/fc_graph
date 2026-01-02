@@ -1,0 +1,2141 @@
+main() <MAIN_RETURN_TYPE main (void) at CoreMark/Src/core_main.c:110>:
+    HAL_Init() <HAL_StatusTypeDef HAL_Init (void) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal.c:143>:
+        __HAL_FLASH_PREFETCH_BUFFER_ENABLE()
+        HAL_NVIC_SetPriorityGrouping() <void HAL_NVIC_SetPriorityGrouping (uint32_t PriorityGroup) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_cortex.c:184>:
+            assert_param()
+            IS_NVIC_PRIORITY_GROUP()
+            NVIC_SetPriorityGrouping()
+        HAL_RCC_GetSysClockFreq() <uint32_t HAL_RCC_GetSysClockFreq (void) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rcc.c:1390>:
+            __HAL_RCC_GET_SYSCLK_SOURCE()
+            __HAL_RCC_GET_FLAG()
+            __HAL_RCC_GET_HSI_DIVIDER()
+        HAL_SYSTICK_CLKSourceConfig() <void HAL_SYSTICK_CLKSourceConfig (uint32_t CLKSource) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_cortex.c:424>:
+            assert_param()
+            IS_SYSTICK_CLK_SOURCE()
+            SET_BIT()
+            CLEAR_BIT()
+            MODIFY_REG()
+        HAL_InitTick() <HAL_StatusTypeDef HAL_InitTick (uint32_t TickPriority) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_timebase_tim_template.c:70> (R):
+            READ_BIT()
+            HAL_SYSTICK_GetCLKSourceConfig() <uint32_t HAL_SYSTICK_GetCLKSourceConfig (void) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_cortex.c:463>:
+                READ_BIT()
+            HAL_SYSTICK_Config() <uint32_t HAL_SYSTICK_Config (uint32_t TicksNumb) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_cortex.c:393>:
+                WRITE_REG()
+                SET_BIT()
+            HAL_NVIC_SetPriority() <void HAL_NVIC_SetPriority (IRQn_Type IRQn, uint32_t PreemptPriority, uint32_t SubPriority) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_cortex.c:207>:
+                assert_param()
+                IS_NVIC_SUB_PRIORITY()
+                IS_NVIC_PREEMPTION_PRIORITY()
+                NVIC_GetPriorityGrouping()
+                NVIC_SetPriority()
+                NVIC_EncodePriority()
+            HAL_PWR_EnableBkUpAccess() <void HAL_PWR_EnableBkUpAccess (void) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_pwr.c:106>:
+                SET_BIT()
+            __HAL_RCC_BACKUPRESET_FORCE()
+            __HAL_RCC_BACKUPRESET_RELEASE()
+            __HAL_RCC_RTC_ENABLE()
+            __HAL_RCC_RTC_CLK_ENABLE()
+            HAL_RCC_OscConfig() <HAL_StatusTypeDef HAL_RCC_OscConfig (const RCC_OscInitTypeDef *pOscInitStruct) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rcc.c:460> (R):
+                assert_param()
+                IS_RCC_OSCILLATORTYPE()
+                __HAL_RCC_GET_SYSCLK_SOURCE()
+                __HAL_RCC_GET_PLL1_OSCSOURCE()
+                IS_RCC_CSI()
+                IS_RCC_CSICALIBRATION_VALUE()
+                __HAL_RCC_CSI_CALIBRATIONVALUE_ADJUST()
+                __HAL_RCC_CSI_ENABLE()
+                HAL_GetTick() <__weak uint32_t HAL_GetTick (void) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal.c:346>:
+                READ_BIT()
+                __HAL_RCC_CSI_DISABLE()
+                IS_RCC_HSE()
+                __HAL_RCC_HSE_CONFIG()
+                IS_RCC_HSI()
+                IS_RCC_HSIDIV()
+                IS_RCC_HSI_CALIBRATION_VALUE()
+                __HAL_RCC_GET_HSI_DIVIDER()
+                __HAL_RCC_HSI_DIVIDER_CONFIG()
+                HAL_RCC_GetHCLKFreq() <uint32_t HAL_RCC_GetHCLKFreq (void) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rcc.c:1496>:
+                    HAL_RCC_GetSysClockFreq() <uint32_t HAL_RCC_GetSysClockFreq (void) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rcc.c:1390>:
+                        __HAL_RCC_GET_SYSCLK_SOURCE()
+                        __HAL_RCC_GET_FLAG()
+                        __HAL_RCC_GET_HSI_DIVIDER()
+                HAL_InitTick() <HAL_StatusTypeDef HAL_InitTick (uint32_t TickPriority) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_timebase_tim_template.c:70> (recursive: see 18)
+                __HAL_RCC_HSI_CALIBRATIONVALUE_ADJUST()
+                __HAL_RCC_HSI_ENABLE()
+                __HAL_RCC_HSI_DISABLE()
+                IS_RCC_LSI()
+                __HAL_RCC_LSI_ENABLE()
+                __HAL_RCC_LSI_DISABLE()
+                IS_RCC_LSE()
+                HAL_IS_BIT_CLR()
+                SET_BIT()
+                __HAL_RCC_LSE_CONFIG()
+                IS_RCC_HSI48()
+                __HAL_RCC_HSI48_ENABLE()
+                __HAL_RCC_HSI48_DISABLE()
+                IS_RCC_PLL()
+                IS_RCC_PLL1_SOURCE()
+                IS_RCC_PLL1_DIVM_VALUE()
+                IS_RCC_PLL1_MULN_VALUE()
+                IS_RCC_PLL1_DIVP_VALUE()
+                IS_RCC_PLL1_DIVQ_VALUE()
+                IS_RCC_PLL1_DIVR_VALUE()
+                __HAL_RCC_PLL1_DISABLE()
+                __HAL_RCC_PLL1_CONFIG()
+                IS_RCC_PLL1_FRACN_VALUE()
+                __HAL_RCC_PLL1_FRACN_DISABLE()
+                __HAL_RCC_PLL1_FRACN_CONFIG()
+                __HAL_RCC_PLL1_FRACN_ENABLE()
+                IS_RCC_PLL1_VCIRGE_VALUE()
+                __HAL_RCC_PLL1_VCIRANGE()
+                IS_RCC_PLL1_VCORGE_VALUE()
+                __HAL_RCC_PLL1_VCORANGE()
+                __HAL_RCC_PLL1_CLKOUT_ENABLE()
+                __HAL_RCC_PLL1_ENABLE()
+            HAL_RCCEx_PeriphCLKConfig() <HAL_StatusTypeDef HAL_RCCEx_PeriphCLKConfig (const RCC_PeriphCLKInitTypeDef *pPeriphClkInit) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rcc_ex.c:154>:
+                assert_param()
+                IS_RCC_PERIPHCLOCK()
+                IS_RCC_CLKPSOURCE()
+                __HAL_RCC_CLKP_CONFIG()
+                IS_RCC_USART1CLKSOURCE()
+                RCCEx_PLL2_Config() <HAL_StatusTypeDef RCCEx_PLL2_Config (const RCC_PLL2InitTypeDef *pll2) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rcc_ex.c:6208>:
+                    assert_param()
+                    IS_RCC_PLL2_SOURCE()
+                    IS_RCC_PLL2_DIVM_VALUE()
+                    IS_RCC_PLL2_MULN_VALUE()
+                    IS_RCC_PLL2_DIVP_VALUE()
+                    IS_RCC_PLL2_DIVQ_VALUE()
+                    IS_RCC_PLL2_DIVR_VALUE()
+                    IS_RCC_PLL2_CLOCKOUT_VALUE()
+                    IS_RCC_PLL2_VCIRGE_VALUE()
+                    IS_RCC_PLL2_VCORGE_VALUE()
+                    IS_RCC_PLL2_FRACN_VALUE()
+                    __HAL_RCC_PLL2_DISABLE()
+                    HAL_GetTick() <__weak uint32_t HAL_GetTick (void) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal.c:346>:
+                    __HAL_RCC_GET_FLAG()
+                    __HAL_RCC_PLL2_CONFIG()
+                    __HAL_RCC_PLL2_VCIRANGE()
+                    __HAL_RCC_PLL2_VCORANGE()
+                    __HAL_RCC_PLL2_CLKOUT_ENABLE()
+                    __HAL_RCC_PLL2_FRACN_DISABLE()
+                    __HAL_RCC_PLL2_FRACN_CONFIG()
+                    __HAL_RCC_PLL2_FRACN_ENABLE()
+                    __HAL_RCC_PLL2_ENABLE()
+                RCCEx_PLL3_Config() <HAL_StatusTypeDef RCCEx_PLL3_Config (const RCC_PLL3InitTypeDef *pll3) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rcc_ex.c:6290>:
+                    assert_param()
+                    IS_RCC_PLL3_SOURCE()
+                    IS_RCC_PLL3_DIVM_VALUE()
+                    IS_RCC_PLL3_MULN_VALUE()
+                    IS_RCC_PLL3_DIVP_VALUE()
+                    IS_RCC_PLL3_DIVQ_VALUE()
+                    IS_RCC_PLL3_DIVR_VALUE()
+                    IS_RCC_PLL3_CLOCKOUT_VALUE()
+                    IS_RCC_PLL3_VCIRGE_VALUE()
+                    IS_RCC_PLL3_VCORGE_VALUE()
+                    IS_RCC_PLL3_FRACN_VALUE()
+                    __HAL_RCC_PLL3_DISABLE()
+                    HAL_GetTick() <__weak uint32_t HAL_GetTick (void) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal.c:346>:
+                    __HAL_RCC_GET_FLAG()
+                    __HAL_RCC_PLL3_CONFIG()
+                    __HAL_RCC_PLL3_VCIRANGE()
+                    __HAL_RCC_PLL3_VCORANGE()
+                    __HAL_RCC_PLL3_CLKOUT_ENABLE()
+                    __HAL_RCC_PLL3_FRACN_DISABLE()
+                    __HAL_RCC_PLL3_FRACN_CONFIG()
+                    __HAL_RCC_PLL3_FRACN_ENABLE()
+                    __HAL_RCC_PLL3_ENABLE()
+                __HAL_RCC_USART1_CONFIG()
+                IS_RCC_USART2CLKSOURCE()
+                __HAL_RCC_USART2_CONFIG()
+                IS_RCC_USART3CLKSOURCE()
+                __HAL_RCC_USART3_CONFIG()
+                IS_RCC_UART4CLKSOURCE()
+                __HAL_RCC_UART4_CONFIG()
+                IS_RCC_UART5CLKSOURCE()
+                __HAL_RCC_UART5_CONFIG()
+                IS_RCC_USART6CLKSOURCE()
+                __HAL_RCC_USART6_CONFIG()
+                IS_RCC_UART7CLKSOURCE()
+                __HAL_RCC_UART7_CONFIG()
+                IS_RCC_UART8CLKSOURCE()
+                __HAL_RCC_UART8_CONFIG()
+                IS_RCC_UART9CLKSOURCE()
+                __HAL_RCC_UART9_CONFIG()
+                IS_RCC_USART10CLKSOURCE()
+                __HAL_RCC_USART10_CONFIG()
+                IS_RCC_USART11CLKSOURCE()
+                __HAL_RCC_USART11_CONFIG()
+                IS_RCC_UART12CLKSOURCE()
+                __HAL_RCC_UART12_CONFIG()
+                IS_RCC_LPUART1CLKSOURCE()
+                __HAL_RCC_LPUART1_CONFIG()
+                IS_RCC_I2C1CLKSOURCE()
+                __HAL_RCC_I2C1_CONFIG()
+                IS_RCC_I2C2CLKSOURCE()
+                __HAL_RCC_I2C2_CONFIG()
+                IS_RCC_I2C3CLKSOURCE()
+                __HAL_RCC_I2C3_CONFIG()
+                IS_RCC_I2C4CLKSOURCE()
+                __HAL_RCC_I2C4_CONFIG()
+                IS_RCC_I3C1CLKSOURCE()
+                __HAL_RCC_I3C1_CONFIG()
+                IS_RCC_I3C2CLKSOURCE()
+                __HAL_RCC_I3C2_CONFIG()
+                IS_RCC_TIMPRES()
+                __HAL_RCC_TIMCLKPRESCALER()
+                IS_RCC_LPTIM1CLK()
+                __HAL_RCC_LPTIM1_CONFIG()
+                IS_RCC_LPTIM2CLK()
+                __HAL_RCC_LPTIM2_CONFIG()
+                IS_RCC_LPTIM3CLK()
+                __HAL_RCC_LPTIM3_CONFIG()
+                IS_RCC_LPTIM4CLK()
+                __HAL_RCC_LPTIM4_CONFIG()
+                IS_RCC_LPTIM5CLK()
+                __HAL_RCC_LPTIM5_CONFIG()
+                IS_RCC_LPTIM6CLK()
+                __HAL_RCC_LPTIM6_CONFIG()
+                IS_RCC_SAI1CLK()
+                __HAL_RCC_PLL1_CLKOUT_ENABLE()
+                __HAL_RCC_SAI1_CONFIG()
+                IS_RCC_SAI2CLK()
+                __HAL_RCC_SAI2_CONFIG()
+                IS_RCC_ADCDACCLKSOURCE()
+                __HAL_RCC_ADCDAC_CONFIG()
+                IS_RCC_DACLPCLKSOURCE()
+                __HAL_RCC_DAC_LP_CONFIG()
+                IS_RCC_RTCCLKSOURCE()
+                SET_BIT()
+                HAL_GetTick() <__weak uint32_t HAL_GetTick (void) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal.c:346>:
+                HAL_IS_BIT_CLR()
+                READ_BIT()
+                __HAL_RCC_BACKUPRESET_FORCE()
+                __HAL_RCC_BACKUPRESET_RELEASE()
+                HAL_IS_BIT_SET()
+                __HAL_RCC_RTC_CONFIG()
+                IS_RCC_RNGCLKSOURCE()
+                __HAL_RCC_RNG_CONFIG()
+                IS_RCC_SDMMC1CLKSOURCE()
+                __HAL_RCC_SDMMC1_CONFIG()
+                IS_RCC_SDMMC2CLKSOURCE()
+                __HAL_RCC_SDMMC2_CONFIG()
+                IS_RCC_SPI1CLKSOURCE()
+                __HAL_RCC_SPI1_CONFIG()
+                IS_RCC_SPI2CLKSOURCE()
+                __HAL_RCC_SPI2_CONFIG()
+                IS_RCC_SPI3CLKSOURCE()
+                __HAL_RCC_SPI3_CONFIG()
+                IS_RCC_SPI4CLKSOURCE()
+                __HAL_RCC_SPI4_CONFIG()
+                IS_RCC_SPI5CLKSOURCE()
+                __HAL_RCC_SPI5_CONFIG()
+                IS_RCC_SPI6CLKSOURCE()
+                __HAL_RCC_SPI6_CONFIG()
+                IS_RCC_OSPICLKSOURCE()
+                __HAL_RCC_OSPI_CONFIG()
+                IS_RCC_FDCANCLK()
+                __HAL_RCC_FDCAN_CONFIG()
+                IS_RCC_USBCLKSOURCE()
+                __HAL_RCC_USB_CONFIG()
+                IS_RCC_CECCLKSOURCE()
+                __HAL_RCC_CEC_CONFIG()
+            HAL_RTC_Init() <HAL_StatusTypeDef HAL_RTC_Init (RTC_HandleTypeDef *hrtc) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc.c:263>:
+                assert_param()
+                IS_RTC_ALL_INSTANCE()
+                IS_RTC_HOUR_FORMAT()
+                IS_RTC_ASYNCH_PREDIV()
+                IS_RTC_SYNCH_PREDIV()
+                IS_RTC_OUTPUT()
+                IS_RTC_OUTPUT_POL()
+                IS_RTC_OUTPUT_TYPE()
+                IS_RTC_OUTPUT_PULLUP()
+                IS_RTC_OUTPUT_REMAP()
+                IS_RTC_BINARY_MODE()
+                IS_RTC_BINARY_MIX_BCDU()
+                HAL_RTC_AlarmAEventCallback() <__weak void HAL_RTC_AlarmAEventCallback (RTC_HandleTypeDef *hrtc) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc.c:2034>:
+                    UNUSED()
+                HAL_RTCEx_AlarmBEventCallback() <__weak void HAL_RTCEx_AlarmBEventCallback (RTC_HandleTypeDef *hrtc) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc_ex.c:1473>:
+                    UNUSED()
+                HAL_RTCEx_TimeStampEventCallback() <__weak void HAL_RTCEx_TimeStampEventCallback (RTC_HandleTypeDef *hrtc) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc_ex.c:500>:
+                    UNUSED()
+                HAL_RTCEx_WakeUpTimerEventCallback() <__weak void HAL_RTCEx_WakeUpTimerEventCallback (RTC_HandleTypeDef *hrtc) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc_ex.c:798>:
+                    UNUSED()
+                HAL_RTCEx_SSRUEventCallback() <__weak void HAL_RTCEx_SSRUEventCallback (RTC_HandleTypeDef *hrtc) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc_ex.c:1439>:
+                    UNUSED()
+                HAL_RTCEx_Tamper1EventCallback() <__weak void HAL_RTCEx_Tamper1EventCallback (RTC_HandleTypeDef *hrtc) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc_ex.c:2449>:
+                    UNUSED()
+                HAL_RTCEx_Tamper2EventCallback() <__weak void HAL_RTCEx_Tamper2EventCallback (RTC_HandleTypeDef *hrtc) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc_ex.c:2464>:
+                    UNUSED()
+                HAL_RTCEx_Tamper3EventCallback() <__weak void HAL_RTCEx_Tamper3EventCallback (RTC_HandleTypeDef *hrtc) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc_ex.c:2479>:
+                    UNUSED()
+                HAL_RTCEx_Tamper4EventCallback() <__weak void HAL_RTCEx_Tamper4EventCallback (RTC_HandleTypeDef *hrtc) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc_ex.c:2494>:
+                    UNUSED()
+                HAL_RTCEx_Tamper5EventCallback() <__weak void HAL_RTCEx_Tamper5EventCallback (RTC_HandleTypeDef *hrtc) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc_ex.c:2509>:
+                    UNUSED()
+                HAL_RTCEx_Tamper6EventCallback() <__weak void HAL_RTCEx_Tamper6EventCallback (RTC_HandleTypeDef *hrtc) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc_ex.c:2524>:
+                    UNUSED()
+                HAL_RTCEx_Tamper7EventCallback() <__weak void HAL_RTCEx_Tamper7EventCallback (RTC_HandleTypeDef *hrtc) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc_ex.c:2539>:
+                    UNUSED()
+                HAL_RTCEx_Tamper8EventCallback() <__weak void HAL_RTCEx_Tamper8EventCallback (RTC_HandleTypeDef *hrtc) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc_ex.c:2554>:
+                    UNUSED()
+                HAL_RTCEx_InternalTamper1EventCallback() <__weak void HAL_RTCEx_InternalTamper1EventCallback (RTC_HandleTypeDef *hrtc) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc_ex.c:2569>:
+                    UNUSED()
+                HAL_RTCEx_InternalTamper2EventCallback() <__weak void HAL_RTCEx_InternalTamper2EventCallback (RTC_HandleTypeDef *hrtc) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc_ex.c:2584>:
+                    UNUSED()
+                HAL_RTCEx_InternalTamper3EventCallback() <__weak void HAL_RTCEx_InternalTamper3EventCallback (RTC_HandleTypeDef *hrtc) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc_ex.c:2599>:
+                    UNUSED()
+                HAL_RTCEx_InternalTamper4EventCallback() <__weak void HAL_RTCEx_InternalTamper4EventCallback (RTC_HandleTypeDef *hrtc) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc_ex.c:2614>:
+                    UNUSED()
+                HAL_RTCEx_InternalTamper5EventCallback() <__weak void HAL_RTCEx_InternalTamper5EventCallback (RTC_HandleTypeDef *hrtc) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc_ex.c:2629>:
+                    UNUSED()
+                HAL_RTCEx_InternalTamper6EventCallback() <__weak void HAL_RTCEx_InternalTamper6EventCallback (RTC_HandleTypeDef *hrtc) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc_ex.c:2644>:
+                    UNUSED()
+                HAL_RTCEx_InternalTamper7EventCallback() <__weak void HAL_RTCEx_InternalTamper7EventCallback (RTC_HandleTypeDef *hrtc) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc_ex.c:2659>:
+                    UNUSED()
+                HAL_RTCEx_InternalTamper8EventCallback() <__weak void HAL_RTCEx_InternalTamper8EventCallback (RTC_HandleTypeDef *hrtc) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc_ex.c:2674>:
+                    UNUSED()
+                HAL_RTCEx_InternalTamper9EventCallback() <__weak void HAL_RTCEx_InternalTamper9EventCallback (RTC_HandleTypeDef *hrtc) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc_ex.c:2689>:
+                    UNUSED()
+                HAL_RTCEx_InternalTamper11EventCallback() <__weak void HAL_RTCEx_InternalTamper11EventCallback (RTC_HandleTypeDef *hrtc) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc_ex.c:2704>:
+                    UNUSED()
+                HAL_RTCEx_InternalTamper12EventCallback() <__weak void HAL_RTCEx_InternalTamper12EventCallback (RTC_HandleTypeDef *hrtc) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc_ex.c:2719>:
+                    UNUSED()
+                HAL_RTCEx_InternalTamper13EventCallback() <__weak void HAL_RTCEx_InternalTamper13EventCallback (RTC_HandleTypeDef *hrtc) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc_ex.c:2734>:
+                    UNUSED()
+                HAL_RTCEx_InternalTamper15EventCallback() <__weak void HAL_RTCEx_InternalTamper15EventCallback (RTC_HandleTypeDef *hrtc) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc_ex.c:2749>:
+                    UNUSED()
+                HAL_RTC_MspInit() <__weak void HAL_RTC_MspInit (RTC_HandleTypeDef *hrtc) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc.c:954>:
+                    UNUSED()
+                HAL_RTC_MspDeInit() <__weak void HAL_RTC_MspDeInit (RTC_HandleTypeDef *hrtc) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc.c:969>:
+                    UNUSED()
+                __HAL_RTC_IS_CALENDAR_INITIALIZED()
+                __HAL_RTC_WRITEPROTECTION_DISABLE()
+                RTC_EnterInitMode() <HAL_StatusTypeDef RTC_EnterInitMode (RTC_HandleTypeDef *hrtc) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc.c:2192>:
+                    READ_BIT()
+                    SET_BIT()
+                    HAL_GetTick() <__weak uint32_t HAL_GetTick (void) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal.c:346>:
+                CLEAR_BIT()
+                SET_BIT()
+                WRITE_REG()
+                MODIFY_REG()
+                RTC_ExitInitMode() <HAL_StatusTypeDef RTC_ExitInitMode (RTC_HandleTypeDef *hrtc) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc.c:2233>:
+                    CLEAR_BIT()
+                    READ_BIT()
+                    HAL_RTC_WaitForSynchro() <HAL_StatusTypeDef HAL_RTC_WaitForSynchro (RTC_HandleTypeDef *hrtc) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc.c:2115>:
+                        CLEAR_BIT()
+                        HAL_GetTick() <__weak uint32_t HAL_GetTick (void) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal.c:346>:
+                        READ_BIT()
+                    SET_BIT()
+                __HAL_RTC_WRITEPROTECTION_ENABLE()
+            HAL_RTC_RegisterCallback() <HAL_StatusTypeDef HAL_RTC_RegisterCallback (RTC_HandleTypeDef *hrtc, HAL_RTC_CallbackIDTypeDef CallbackID, pRTC_CallbackTypeDef pCallback) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc.c:571>:
+            HAL_RTC_SetAlarm_IT() <HAL_StatusTypeDef HAL_RTC_SetAlarm_IT (RTC_HandleTypeDef *hrtc, RTC_AlarmTypeDef *sAlarm, uint32_t Format) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc.c:1629>:
+                __HAL_LOCK()
+                READ_BIT()
+                assert_param()
+                IS_RTC_FORMAT()
+                IS_RTC_ALARM()
+                IS_RTC_ALARM_MASK()
+                IS_RTC_ALARM_DATE_WEEKDAY_SEL()
+                IS_RTC_ALARM_SUB_SECOND_VALUE()
+                IS_RTC_ALARM_SUB_SECOND_MASK()
+                IS_RTC_ALARM_SUB_SECOND_BINARY_MASK()
+                IS_RTC_ALARMSUBSECONDBIN_AUTOCLR()
+                IS_RTC_HOUR12()
+                IS_RTC_HOURFORMAT12()
+                IS_RTC_HOUR24()
+                IS_RTC_MINUTES()
+                IS_RTC_SECONDS()
+                IS_RTC_ALARM_DATE_WEEKDAY_DATE()
+                IS_RTC_ALARM_DATE_WEEKDAY_WEEKDAY()
+                RTC_ByteToBcd2() <uint8_t RTC_ByteToBcd2 (uint8_t Value) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc.c:2271>:
+                RTC_Bcd2ToByte() <uint8_t RTC_Bcd2ToByte (uint8_t Value) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc.c:2290>:
+                CLEAR_BIT()
+                WRITE_REG()
+                SET_BIT()
+                __HAL_UNLOCK()
+            HAL_NVIC_EnableIRQ() <void HAL_NVIC_EnableIRQ (IRQn_Type IRQn) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_cortex.c:230>:
+                assert_param()
+                IS_NVIC_DEVICE_IRQ()
+                NVIC_EnableIRQ()
+            HAL_RTCEx_SetWakeUpTimer_IT() <HAL_StatusTypeDef HAL_RTCEx_SetWakeUpTimer_IT (RTC_HandleTypeDef *hrtc, uint32_t WakeUpCounter, uint32_t WakeUpClock, uint32_t WakeUpAutoClr) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc_ex.c:655>:
+                assert_param()
+                IS_RTC_WAKEUP_CLOCK()
+                IS_RTC_WAKEUP_COUNTER()
+                __HAL_LOCK()
+                CLEAR_BIT()
+                WRITE_REG()
+                READ_BIT()
+                HAL_GetTick() <__weak uint32_t HAL_GetTick (void) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal.c:346>:
+                __HAL_UNLOCK()
+                MODIFY_REG()
+                SET_BIT()
+            __HAL_RCC_TIM6_CLK_ENABLE()
+            HAL_RCC_GetClockConfig() <void HAL_RCC_GetClockConfig (RCC_ClkInitTypeDef *pClkInitStruct, uint32_t *pFLatency) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rcc.c:1624>:
+                assert_param()
+            HAL_RCC_GetPCLK1Freq() <uint32_t HAL_RCC_GetPCLK1Freq (void) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rcc.c:1511>:
+                HAL_RCC_GetHCLKFreq() <uint32_t HAL_RCC_GetHCLKFreq (void) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rcc.c:1496>:
+                    HAL_RCC_GetSysClockFreq() <uint32_t HAL_RCC_GetSysClockFreq (void) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rcc.c:1390>:
+                        __HAL_RCC_GET_SYSCLK_SOURCE()
+                        __HAL_RCC_GET_FLAG()
+                        __HAL_RCC_GET_HSI_DIVIDER()
+            HAL_TIM_Base_Init() <HAL_StatusTypeDef HAL_TIM_Base_Init (TIM_HandleTypeDef *htim) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_tim.c:281>:
+                assert_param()
+                IS_TIM_INSTANCE()
+                IS_TIM_COUNTER_MODE()
+                IS_TIM_CLOCKDIVISION_DIV()
+                IS_TIM_PERIOD()
+                IS_TIM_AUTORELOAD_PRELOAD()
+                TIM_ResetCallback() <void TIM_ResetCallback (TIM_HandleTypeDef *htim) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_tim.c:8238>:
+                    HAL_TIM_PeriodElapsedCallback() <__weak void HAL_TIM_PeriodElapsedCallback (TIM_HandleTypeDef *htim) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_tim.c:6145>:
+                        UNUSED()
+                    HAL_TIM_PeriodElapsedHalfCpltCallback() <__weak void HAL_TIM_PeriodElapsedHalfCpltCallback (TIM_HandleTypeDef *htim) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_tim.c:6160>:
+                        UNUSED()
+                    HAL_TIM_TriggerCallback() <__weak void HAL_TIM_TriggerCallback (TIM_HandleTypeDef *htim) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_tim.c:6250>:
+                        UNUSED()
+                    HAL_TIM_TriggerHalfCpltCallback() <__weak void HAL_TIM_TriggerHalfCpltCallback (TIM_HandleTypeDef *htim) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_tim.c:6265>:
+                        UNUSED()
+                    HAL_TIM_IC_CaptureCallback() <__weak void HAL_TIM_IC_CaptureCallback (TIM_HandleTypeDef *htim) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_tim.c:6190>:
+                        UNUSED()
+                    HAL_TIM_IC_CaptureHalfCpltCallback() <__weak void HAL_TIM_IC_CaptureHalfCpltCallback (TIM_HandleTypeDef *htim) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_tim.c:6205>:
+                        UNUSED()
+                    HAL_TIM_OC_DelayElapsedCallback() <__weak void HAL_TIM_OC_DelayElapsedCallback (TIM_HandleTypeDef *htim) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_tim.c:6175>:
+                        UNUSED()
+                    HAL_TIM_PWM_PulseFinishedCallback() <__weak void HAL_TIM_PWM_PulseFinishedCallback (TIM_HandleTypeDef *htim) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_tim.c:6220>:
+                        UNUSED()
+                    HAL_TIM_PWM_PulseFinishedHalfCpltCallback() <__weak void HAL_TIM_PWM_PulseFinishedHalfCpltCallback (TIM_HandleTypeDef *htim) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_tim.c:6235>:
+                        UNUSED()
+                    HAL_TIM_ErrorCallback() <__weak void HAL_TIM_ErrorCallback (TIM_HandleTypeDef *htim) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_tim.c:6280>:
+                        UNUSED()
+                    HAL_TIMEx_CommutCallback() <__weak void HAL_TIMEx_CommutCallback (TIM_HandleTypeDef *htim) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_tim_ex.c:3139>:
+                        UNUSED()
+                    HAL_TIMEx_CommutHalfCpltCallback() <__weak void HAL_TIMEx_CommutHalfCpltCallback (TIM_HandleTypeDef *htim) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_tim_ex.c:3153>:
+                        UNUSED()
+                    HAL_TIMEx_BreakCallback() <__weak void HAL_TIMEx_BreakCallback (TIM_HandleTypeDef *htim) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_tim_ex.c:3168>:
+                        UNUSED()
+                    HAL_TIMEx_Break2Callback() <__weak void HAL_TIMEx_Break2Callback (TIM_HandleTypeDef *htim) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_tim_ex.c:3183>:
+                        UNUSED()
+                    HAL_TIMEx_EncoderIndexCallback() <__weak void HAL_TIMEx_EncoderIndexCallback (TIM_HandleTypeDef *htim) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_tim_ex.c:3198>:
+                        UNUSED()
+                    HAL_TIMEx_DirectionChangeCallback() <__weak void HAL_TIMEx_DirectionChangeCallback (TIM_HandleTypeDef *htim) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_tim_ex.c:3213>:
+                        UNUSED()
+                    HAL_TIMEx_IndexErrorCallback() <__weak void HAL_TIMEx_IndexErrorCallback (TIM_HandleTypeDef *htim) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_tim_ex.c:3228>:
+                        UNUSED()
+                    HAL_TIMEx_TransitionErrorCallback() <__weak void HAL_TIMEx_TransitionErrorCallback (TIM_HandleTypeDef *htim) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_tim_ex.c:3243>:
+                        UNUSED()
+                HAL_TIM_Base_MspInit() <__weak void HAL_TIM_Base_MspInit (TIM_HandleTypeDef *htim) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_tim.c:384>:
+                    UNUSED()
+                TIM_Base_SetConfig() <void TIM_Base_SetConfig (TIM_TypeDef *TIMx, const TIM_Base_InitTypeDef *Structure) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_tim.c:7266>:
+                    IS_TIM_COUNTER_MODE_SELECT_INSTANCE()
+                    IS_TIM_CLOCK_DIVISION_INSTANCE()
+                    MODIFY_REG()
+                    IS_TIM_REPETITION_COUNTER_INSTANCE()
+                    HAL_IS_BIT_SET()
+                    CLEAR_BIT()
+                TIM_CHANNEL_STATE_SET_ALL()
+                TIM_CHANNEL_N_STATE_SET_ALL()
+            HAL_TIM_RegisterCallback() <HAL_StatusTypeDef HAL_TIM_RegisterCallback (TIM_HandleTypeDef *htim, HAL_TIM_CallbackIDTypeDef CallbackID, pTIM_CallbackTypeDef pCallback) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_tim.c:6331>:
+            HAL_TIM_Base_Start_IT() <HAL_StatusTypeDef HAL_TIM_Base_Start_IT (TIM_HandleTypeDef *htim) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_tim.c:474>:
+                assert_param()
+                IS_TIM_INSTANCE()
+                __HAL_TIM_ENABLE_IT()
+                IS_TIM_SLAVE_INSTANCE()
+                IS_TIM_SLAVEMODE_TRIGGER_ENABLED()
+                __HAL_TIM_ENABLE()
+        HAL_MspInit() <void HAL_MspInit (void) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_msp_template.c:56>
+    SystemClock_Config() <void SystemClock_Config (void) at Core/Src/main.c:116>:
+        __HAL_PWR_VOLTAGESCALING_CONFIG()
+        __HAL_PWR_GET_FLAG()
+        HAL_RCC_OscConfig() <HAL_StatusTypeDef HAL_RCC_OscConfig (const RCC_OscInitTypeDef *pOscInitStruct) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rcc.c:460> (R):
+            assert_param()
+            IS_RCC_OSCILLATORTYPE()
+            __HAL_RCC_GET_SYSCLK_SOURCE()
+            __HAL_RCC_GET_PLL1_OSCSOURCE()
+            IS_RCC_CSI()
+            IS_RCC_CSICALIBRATION_VALUE()
+            __HAL_RCC_CSI_CALIBRATIONVALUE_ADJUST()
+            __HAL_RCC_CSI_ENABLE()
+            HAL_GetTick() <__weak uint32_t HAL_GetTick (void) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal.c:346>:
+            READ_BIT()
+            __HAL_RCC_CSI_DISABLE()
+            IS_RCC_HSE()
+            __HAL_RCC_HSE_CONFIG()
+            IS_RCC_HSI()
+            IS_RCC_HSIDIV()
+            IS_RCC_HSI_CALIBRATION_VALUE()
+            __HAL_RCC_GET_HSI_DIVIDER()
+            __HAL_RCC_HSI_DIVIDER_CONFIG()
+            HAL_RCC_GetHCLKFreq() <uint32_t HAL_RCC_GetHCLKFreq (void) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rcc.c:1496>:
+                HAL_RCC_GetSysClockFreq() <uint32_t HAL_RCC_GetSysClockFreq (void) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rcc.c:1390>:
+                    __HAL_RCC_GET_SYSCLK_SOURCE()
+                    __HAL_RCC_GET_FLAG()
+                    __HAL_RCC_GET_HSI_DIVIDER()
+            HAL_InitTick() <HAL_StatusTypeDef HAL_InitTick (uint32_t TickPriority) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_timebase_tim_template.c:70> (R):
+                READ_BIT()
+                HAL_SYSTICK_GetCLKSourceConfig() <uint32_t HAL_SYSTICK_GetCLKSourceConfig (void) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_cortex.c:463>:
+                    READ_BIT()
+                HAL_SYSTICK_Config() <uint32_t HAL_SYSTICK_Config (uint32_t TicksNumb) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_cortex.c:393>:
+                    WRITE_REG()
+                    SET_BIT()
+                HAL_NVIC_SetPriority() <void HAL_NVIC_SetPriority (IRQn_Type IRQn, uint32_t PreemptPriority, uint32_t SubPriority) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_cortex.c:207>:
+                    assert_param()
+                    IS_NVIC_SUB_PRIORITY()
+                    IS_NVIC_PREEMPTION_PRIORITY()
+                    NVIC_GetPriorityGrouping()
+                    NVIC_SetPriority()
+                    NVIC_EncodePriority()
+                HAL_PWR_EnableBkUpAccess() <void HAL_PWR_EnableBkUpAccess (void) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_pwr.c:106>:
+                    SET_BIT()
+                __HAL_RCC_BACKUPRESET_FORCE()
+                __HAL_RCC_BACKUPRESET_RELEASE()
+                __HAL_RCC_RTC_ENABLE()
+                __HAL_RCC_RTC_CLK_ENABLE()
+                HAL_RCC_OscConfig() <HAL_StatusTypeDef HAL_RCC_OscConfig (const RCC_OscInitTypeDef *pOscInitStruct) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rcc.c:460> (recursive: see 448)
+                HAL_RCCEx_PeriphCLKConfig() <HAL_StatusTypeDef HAL_RCCEx_PeriphCLKConfig (const RCC_PeriphCLKInitTypeDef *pPeriphClkInit) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rcc_ex.c:154>:
+                    assert_param()
+                    IS_RCC_PERIPHCLOCK()
+                    IS_RCC_CLKPSOURCE()
+                    __HAL_RCC_CLKP_CONFIG()
+                    IS_RCC_USART1CLKSOURCE()
+                    RCCEx_PLL2_Config() <HAL_StatusTypeDef RCCEx_PLL2_Config (const RCC_PLL2InitTypeDef *pll2) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rcc_ex.c:6208>:
+                        assert_param()
+                        IS_RCC_PLL2_SOURCE()
+                        IS_RCC_PLL2_DIVM_VALUE()
+                        IS_RCC_PLL2_MULN_VALUE()
+                        IS_RCC_PLL2_DIVP_VALUE()
+                        IS_RCC_PLL2_DIVQ_VALUE()
+                        IS_RCC_PLL2_DIVR_VALUE()
+                        IS_RCC_PLL2_CLOCKOUT_VALUE()
+                        IS_RCC_PLL2_VCIRGE_VALUE()
+                        IS_RCC_PLL2_VCORGE_VALUE()
+                        IS_RCC_PLL2_FRACN_VALUE()
+                        __HAL_RCC_PLL2_DISABLE()
+                        HAL_GetTick() <__weak uint32_t HAL_GetTick (void) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal.c:346>:
+                        __HAL_RCC_GET_FLAG()
+                        __HAL_RCC_PLL2_CONFIG()
+                        __HAL_RCC_PLL2_VCIRANGE()
+                        __HAL_RCC_PLL2_VCORANGE()
+                        __HAL_RCC_PLL2_CLKOUT_ENABLE()
+                        __HAL_RCC_PLL2_FRACN_DISABLE()
+                        __HAL_RCC_PLL2_FRACN_CONFIG()
+                        __HAL_RCC_PLL2_FRACN_ENABLE()
+                        __HAL_RCC_PLL2_ENABLE()
+                    RCCEx_PLL3_Config() <HAL_StatusTypeDef RCCEx_PLL3_Config (const RCC_PLL3InitTypeDef *pll3) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rcc_ex.c:6290>:
+                        assert_param()
+                        IS_RCC_PLL3_SOURCE()
+                        IS_RCC_PLL3_DIVM_VALUE()
+                        IS_RCC_PLL3_MULN_VALUE()
+                        IS_RCC_PLL3_DIVP_VALUE()
+                        IS_RCC_PLL3_DIVQ_VALUE()
+                        IS_RCC_PLL3_DIVR_VALUE()
+                        IS_RCC_PLL3_CLOCKOUT_VALUE()
+                        IS_RCC_PLL3_VCIRGE_VALUE()
+                        IS_RCC_PLL3_VCORGE_VALUE()
+                        IS_RCC_PLL3_FRACN_VALUE()
+                        __HAL_RCC_PLL3_DISABLE()
+                        HAL_GetTick() <__weak uint32_t HAL_GetTick (void) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal.c:346>:
+                        __HAL_RCC_GET_FLAG()
+                        __HAL_RCC_PLL3_CONFIG()
+                        __HAL_RCC_PLL3_VCIRANGE()
+                        __HAL_RCC_PLL3_VCORANGE()
+                        __HAL_RCC_PLL3_CLKOUT_ENABLE()
+                        __HAL_RCC_PLL3_FRACN_DISABLE()
+                        __HAL_RCC_PLL3_FRACN_CONFIG()
+                        __HAL_RCC_PLL3_FRACN_ENABLE()
+                        __HAL_RCC_PLL3_ENABLE()
+                    __HAL_RCC_USART1_CONFIG()
+                    IS_RCC_USART2CLKSOURCE()
+                    __HAL_RCC_USART2_CONFIG()
+                    IS_RCC_USART3CLKSOURCE()
+                    __HAL_RCC_USART3_CONFIG()
+                    IS_RCC_UART4CLKSOURCE()
+                    __HAL_RCC_UART4_CONFIG()
+                    IS_RCC_UART5CLKSOURCE()
+                    __HAL_RCC_UART5_CONFIG()
+                    IS_RCC_USART6CLKSOURCE()
+                    __HAL_RCC_USART6_CONFIG()
+                    IS_RCC_UART7CLKSOURCE()
+                    __HAL_RCC_UART7_CONFIG()
+                    IS_RCC_UART8CLKSOURCE()
+                    __HAL_RCC_UART8_CONFIG()
+                    IS_RCC_UART9CLKSOURCE()
+                    __HAL_RCC_UART9_CONFIG()
+                    IS_RCC_USART10CLKSOURCE()
+                    __HAL_RCC_USART10_CONFIG()
+                    IS_RCC_USART11CLKSOURCE()
+                    __HAL_RCC_USART11_CONFIG()
+                    IS_RCC_UART12CLKSOURCE()
+                    __HAL_RCC_UART12_CONFIG()
+                    IS_RCC_LPUART1CLKSOURCE()
+                    __HAL_RCC_LPUART1_CONFIG()
+                    IS_RCC_I2C1CLKSOURCE()
+                    __HAL_RCC_I2C1_CONFIG()
+                    IS_RCC_I2C2CLKSOURCE()
+                    __HAL_RCC_I2C2_CONFIG()
+                    IS_RCC_I2C3CLKSOURCE()
+                    __HAL_RCC_I2C3_CONFIG()
+                    IS_RCC_I2C4CLKSOURCE()
+                    __HAL_RCC_I2C4_CONFIG()
+                    IS_RCC_I3C1CLKSOURCE()
+                    __HAL_RCC_I3C1_CONFIG()
+                    IS_RCC_I3C2CLKSOURCE()
+                    __HAL_RCC_I3C2_CONFIG()
+                    IS_RCC_TIMPRES()
+                    __HAL_RCC_TIMCLKPRESCALER()
+                    IS_RCC_LPTIM1CLK()
+                    __HAL_RCC_LPTIM1_CONFIG()
+                    IS_RCC_LPTIM2CLK()
+                    __HAL_RCC_LPTIM2_CONFIG()
+                    IS_RCC_LPTIM3CLK()
+                    __HAL_RCC_LPTIM3_CONFIG()
+                    IS_RCC_LPTIM4CLK()
+                    __HAL_RCC_LPTIM4_CONFIG()
+                    IS_RCC_LPTIM5CLK()
+                    __HAL_RCC_LPTIM5_CONFIG()
+                    IS_RCC_LPTIM6CLK()
+                    __HAL_RCC_LPTIM6_CONFIG()
+                    IS_RCC_SAI1CLK()
+                    __HAL_RCC_PLL1_CLKOUT_ENABLE()
+                    __HAL_RCC_SAI1_CONFIG()
+                    IS_RCC_SAI2CLK()
+                    __HAL_RCC_SAI2_CONFIG()
+                    IS_RCC_ADCDACCLKSOURCE()
+                    __HAL_RCC_ADCDAC_CONFIG()
+                    IS_RCC_DACLPCLKSOURCE()
+                    __HAL_RCC_DAC_LP_CONFIG()
+                    IS_RCC_RTCCLKSOURCE()
+                    SET_BIT()
+                    HAL_GetTick() <__weak uint32_t HAL_GetTick (void) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal.c:346>:
+                    HAL_IS_BIT_CLR()
+                    READ_BIT()
+                    __HAL_RCC_BACKUPRESET_FORCE()
+                    __HAL_RCC_BACKUPRESET_RELEASE()
+                    HAL_IS_BIT_SET()
+                    __HAL_RCC_RTC_CONFIG()
+                    IS_RCC_RNGCLKSOURCE()
+                    __HAL_RCC_RNG_CONFIG()
+                    IS_RCC_SDMMC1CLKSOURCE()
+                    __HAL_RCC_SDMMC1_CONFIG()
+                    IS_RCC_SDMMC2CLKSOURCE()
+                    __HAL_RCC_SDMMC2_CONFIG()
+                    IS_RCC_SPI1CLKSOURCE()
+                    __HAL_RCC_SPI1_CONFIG()
+                    IS_RCC_SPI2CLKSOURCE()
+                    __HAL_RCC_SPI2_CONFIG()
+                    IS_RCC_SPI3CLKSOURCE()
+                    __HAL_RCC_SPI3_CONFIG()
+                    IS_RCC_SPI4CLKSOURCE()
+                    __HAL_RCC_SPI4_CONFIG()
+                    IS_RCC_SPI5CLKSOURCE()
+                    __HAL_RCC_SPI5_CONFIG()
+                    IS_RCC_SPI6CLKSOURCE()
+                    __HAL_RCC_SPI6_CONFIG()
+                    IS_RCC_OSPICLKSOURCE()
+                    __HAL_RCC_OSPI_CONFIG()
+                    IS_RCC_FDCANCLK()
+                    __HAL_RCC_FDCAN_CONFIG()
+                    IS_RCC_USBCLKSOURCE()
+                    __HAL_RCC_USB_CONFIG()
+                    IS_RCC_CECCLKSOURCE()
+                    __HAL_RCC_CEC_CONFIG()
+                HAL_RTC_Init() <HAL_StatusTypeDef HAL_RTC_Init (RTC_HandleTypeDef *hrtc) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc.c:263>:
+                    assert_param()
+                    IS_RTC_ALL_INSTANCE()
+                    IS_RTC_HOUR_FORMAT()
+                    IS_RTC_ASYNCH_PREDIV()
+                    IS_RTC_SYNCH_PREDIV()
+                    IS_RTC_OUTPUT()
+                    IS_RTC_OUTPUT_POL()
+                    IS_RTC_OUTPUT_TYPE()
+                    IS_RTC_OUTPUT_PULLUP()
+                    IS_RTC_OUTPUT_REMAP()
+                    IS_RTC_BINARY_MODE()
+                    IS_RTC_BINARY_MIX_BCDU()
+                    HAL_RTC_AlarmAEventCallback() <__weak void HAL_RTC_AlarmAEventCallback (RTC_HandleTypeDef *hrtc) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc.c:2034>:
+                        UNUSED()
+                    HAL_RTCEx_AlarmBEventCallback() <__weak void HAL_RTCEx_AlarmBEventCallback (RTC_HandleTypeDef *hrtc) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc_ex.c:1473>:
+                        UNUSED()
+                    HAL_RTCEx_TimeStampEventCallback() <__weak void HAL_RTCEx_TimeStampEventCallback (RTC_HandleTypeDef *hrtc) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc_ex.c:500>:
+                        UNUSED()
+                    HAL_RTCEx_WakeUpTimerEventCallback() <__weak void HAL_RTCEx_WakeUpTimerEventCallback (RTC_HandleTypeDef *hrtc) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc_ex.c:798>:
+                        UNUSED()
+                    HAL_RTCEx_SSRUEventCallback() <__weak void HAL_RTCEx_SSRUEventCallback (RTC_HandleTypeDef *hrtc) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc_ex.c:1439>:
+                        UNUSED()
+                    HAL_RTCEx_Tamper1EventCallback() <__weak void HAL_RTCEx_Tamper1EventCallback (RTC_HandleTypeDef *hrtc) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc_ex.c:2449>:
+                        UNUSED()
+                    HAL_RTCEx_Tamper2EventCallback() <__weak void HAL_RTCEx_Tamper2EventCallback (RTC_HandleTypeDef *hrtc) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc_ex.c:2464>:
+                        UNUSED()
+                    HAL_RTCEx_Tamper3EventCallback() <__weak void HAL_RTCEx_Tamper3EventCallback (RTC_HandleTypeDef *hrtc) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc_ex.c:2479>:
+                        UNUSED()
+                    HAL_RTCEx_Tamper4EventCallback() <__weak void HAL_RTCEx_Tamper4EventCallback (RTC_HandleTypeDef *hrtc) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc_ex.c:2494>:
+                        UNUSED()
+                    HAL_RTCEx_Tamper5EventCallback() <__weak void HAL_RTCEx_Tamper5EventCallback (RTC_HandleTypeDef *hrtc) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc_ex.c:2509>:
+                        UNUSED()
+                    HAL_RTCEx_Tamper6EventCallback() <__weak void HAL_RTCEx_Tamper6EventCallback (RTC_HandleTypeDef *hrtc) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc_ex.c:2524>:
+                        UNUSED()
+                    HAL_RTCEx_Tamper7EventCallback() <__weak void HAL_RTCEx_Tamper7EventCallback (RTC_HandleTypeDef *hrtc) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc_ex.c:2539>:
+                        UNUSED()
+                    HAL_RTCEx_Tamper8EventCallback() <__weak void HAL_RTCEx_Tamper8EventCallback (RTC_HandleTypeDef *hrtc) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc_ex.c:2554>:
+                        UNUSED()
+                    HAL_RTCEx_InternalTamper1EventCallback() <__weak void HAL_RTCEx_InternalTamper1EventCallback (RTC_HandleTypeDef *hrtc) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc_ex.c:2569>:
+                        UNUSED()
+                    HAL_RTCEx_InternalTamper2EventCallback() <__weak void HAL_RTCEx_InternalTamper2EventCallback (RTC_HandleTypeDef *hrtc) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc_ex.c:2584>:
+                        UNUSED()
+                    HAL_RTCEx_InternalTamper3EventCallback() <__weak void HAL_RTCEx_InternalTamper3EventCallback (RTC_HandleTypeDef *hrtc) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc_ex.c:2599>:
+                        UNUSED()
+                    HAL_RTCEx_InternalTamper4EventCallback() <__weak void HAL_RTCEx_InternalTamper4EventCallback (RTC_HandleTypeDef *hrtc) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc_ex.c:2614>:
+                        UNUSED()
+                    HAL_RTCEx_InternalTamper5EventCallback() <__weak void HAL_RTCEx_InternalTamper5EventCallback (RTC_HandleTypeDef *hrtc) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc_ex.c:2629>:
+                        UNUSED()
+                    HAL_RTCEx_InternalTamper6EventCallback() <__weak void HAL_RTCEx_InternalTamper6EventCallback (RTC_HandleTypeDef *hrtc) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc_ex.c:2644>:
+                        UNUSED()
+                    HAL_RTCEx_InternalTamper7EventCallback() <__weak void HAL_RTCEx_InternalTamper7EventCallback (RTC_HandleTypeDef *hrtc) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc_ex.c:2659>:
+                        UNUSED()
+                    HAL_RTCEx_InternalTamper8EventCallback() <__weak void HAL_RTCEx_InternalTamper8EventCallback (RTC_HandleTypeDef *hrtc) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc_ex.c:2674>:
+                        UNUSED()
+                    HAL_RTCEx_InternalTamper9EventCallback() <__weak void HAL_RTCEx_InternalTamper9EventCallback (RTC_HandleTypeDef *hrtc) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc_ex.c:2689>:
+                        UNUSED()
+                    HAL_RTCEx_InternalTamper11EventCallback() <__weak void HAL_RTCEx_InternalTamper11EventCallback (RTC_HandleTypeDef *hrtc) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc_ex.c:2704>:
+                        UNUSED()
+                    HAL_RTCEx_InternalTamper12EventCallback() <__weak void HAL_RTCEx_InternalTamper12EventCallback (RTC_HandleTypeDef *hrtc) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc_ex.c:2719>:
+                        UNUSED()
+                    HAL_RTCEx_InternalTamper13EventCallback() <__weak void HAL_RTCEx_InternalTamper13EventCallback (RTC_HandleTypeDef *hrtc) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc_ex.c:2734>:
+                        UNUSED()
+                    HAL_RTCEx_InternalTamper15EventCallback() <__weak void HAL_RTCEx_InternalTamper15EventCallback (RTC_HandleTypeDef *hrtc) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc_ex.c:2749>:
+                        UNUSED()
+                    HAL_RTC_MspInit() <__weak void HAL_RTC_MspInit (RTC_HandleTypeDef *hrtc) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc.c:954>:
+                        UNUSED()
+                    HAL_RTC_MspDeInit() <__weak void HAL_RTC_MspDeInit (RTC_HandleTypeDef *hrtc) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc.c:969>:
+                        UNUSED()
+                    __HAL_RTC_IS_CALENDAR_INITIALIZED()
+                    __HAL_RTC_WRITEPROTECTION_DISABLE()
+                    RTC_EnterInitMode() <HAL_StatusTypeDef RTC_EnterInitMode (RTC_HandleTypeDef *hrtc) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc.c:2192>:
+                        READ_BIT()
+                        SET_BIT()
+                        HAL_GetTick() <__weak uint32_t HAL_GetTick (void) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal.c:346>:
+                    CLEAR_BIT()
+                    SET_BIT()
+                    WRITE_REG()
+                    MODIFY_REG()
+                    RTC_ExitInitMode() <HAL_StatusTypeDef RTC_ExitInitMode (RTC_HandleTypeDef *hrtc) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc.c:2233>:
+                        CLEAR_BIT()
+                        READ_BIT()
+                        HAL_RTC_WaitForSynchro() <HAL_StatusTypeDef HAL_RTC_WaitForSynchro (RTC_HandleTypeDef *hrtc) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc.c:2115>:
+                            CLEAR_BIT()
+                            HAL_GetTick() <__weak uint32_t HAL_GetTick (void) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal.c:346>:
+                            READ_BIT()
+                        SET_BIT()
+                    __HAL_RTC_WRITEPROTECTION_ENABLE()
+                HAL_RTC_RegisterCallback() <HAL_StatusTypeDef HAL_RTC_RegisterCallback (RTC_HandleTypeDef *hrtc, HAL_RTC_CallbackIDTypeDef CallbackID, pRTC_CallbackTypeDef pCallback) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc.c:571>:
+                HAL_RTC_SetAlarm_IT() <HAL_StatusTypeDef HAL_RTC_SetAlarm_IT (RTC_HandleTypeDef *hrtc, RTC_AlarmTypeDef *sAlarm, uint32_t Format) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc.c:1629>:
+                    __HAL_LOCK()
+                    READ_BIT()
+                    assert_param()
+                    IS_RTC_FORMAT()
+                    IS_RTC_ALARM()
+                    IS_RTC_ALARM_MASK()
+                    IS_RTC_ALARM_DATE_WEEKDAY_SEL()
+                    IS_RTC_ALARM_SUB_SECOND_VALUE()
+                    IS_RTC_ALARM_SUB_SECOND_MASK()
+                    IS_RTC_ALARM_SUB_SECOND_BINARY_MASK()
+                    IS_RTC_ALARMSUBSECONDBIN_AUTOCLR()
+                    IS_RTC_HOUR12()
+                    IS_RTC_HOURFORMAT12()
+                    IS_RTC_HOUR24()
+                    IS_RTC_MINUTES()
+                    IS_RTC_SECONDS()
+                    IS_RTC_ALARM_DATE_WEEKDAY_DATE()
+                    IS_RTC_ALARM_DATE_WEEKDAY_WEEKDAY()
+                    RTC_ByteToBcd2() <uint8_t RTC_ByteToBcd2 (uint8_t Value) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc.c:2271>:
+                    RTC_Bcd2ToByte() <uint8_t RTC_Bcd2ToByte (uint8_t Value) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc.c:2290>:
+                    CLEAR_BIT()
+                    WRITE_REG()
+                    SET_BIT()
+                    __HAL_UNLOCK()
+                HAL_NVIC_EnableIRQ() <void HAL_NVIC_EnableIRQ (IRQn_Type IRQn) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_cortex.c:230>:
+                    assert_param()
+                    IS_NVIC_DEVICE_IRQ()
+                    NVIC_EnableIRQ()
+                HAL_RTCEx_SetWakeUpTimer_IT() <HAL_StatusTypeDef HAL_RTCEx_SetWakeUpTimer_IT (RTC_HandleTypeDef *hrtc, uint32_t WakeUpCounter, uint32_t WakeUpClock, uint32_t WakeUpAutoClr) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc_ex.c:655>:
+                    assert_param()
+                    IS_RTC_WAKEUP_CLOCK()
+                    IS_RTC_WAKEUP_COUNTER()
+                    __HAL_LOCK()
+                    CLEAR_BIT()
+                    WRITE_REG()
+                    READ_BIT()
+                    HAL_GetTick() <__weak uint32_t HAL_GetTick (void) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal.c:346>:
+                    __HAL_UNLOCK()
+                    MODIFY_REG()
+                    SET_BIT()
+                __HAL_RCC_TIM6_CLK_ENABLE()
+                HAL_RCC_GetClockConfig() <void HAL_RCC_GetClockConfig (RCC_ClkInitTypeDef *pClkInitStruct, uint32_t *pFLatency) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rcc.c:1624>:
+                    assert_param()
+                HAL_RCC_GetPCLK1Freq() <uint32_t HAL_RCC_GetPCLK1Freq (void) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rcc.c:1511>:
+                    HAL_RCC_GetHCLKFreq() <uint32_t HAL_RCC_GetHCLKFreq (void) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rcc.c:1496>:
+                        HAL_RCC_GetSysClockFreq() <uint32_t HAL_RCC_GetSysClockFreq (void) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rcc.c:1390>:
+                            __HAL_RCC_GET_SYSCLK_SOURCE()
+                            __HAL_RCC_GET_FLAG()
+                            __HAL_RCC_GET_HSI_DIVIDER()
+                HAL_TIM_Base_Init() <HAL_StatusTypeDef HAL_TIM_Base_Init (TIM_HandleTypeDef *htim) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_tim.c:281>:
+                    assert_param()
+                    IS_TIM_INSTANCE()
+                    IS_TIM_COUNTER_MODE()
+                    IS_TIM_CLOCKDIVISION_DIV()
+                    IS_TIM_PERIOD()
+                    IS_TIM_AUTORELOAD_PRELOAD()
+                    TIM_ResetCallback() <void TIM_ResetCallback (TIM_HandleTypeDef *htim) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_tim.c:8238>:
+                        HAL_TIM_PeriodElapsedCallback() <__weak void HAL_TIM_PeriodElapsedCallback (TIM_HandleTypeDef *htim) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_tim.c:6145>:
+                            UNUSED()
+                        HAL_TIM_PeriodElapsedHalfCpltCallback() <__weak void HAL_TIM_PeriodElapsedHalfCpltCallback (TIM_HandleTypeDef *htim) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_tim.c:6160>:
+                            UNUSED()
+                        HAL_TIM_TriggerCallback() <__weak void HAL_TIM_TriggerCallback (TIM_HandleTypeDef *htim) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_tim.c:6250>:
+                            UNUSED()
+                        HAL_TIM_TriggerHalfCpltCallback() <__weak void HAL_TIM_TriggerHalfCpltCallback (TIM_HandleTypeDef *htim) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_tim.c:6265>:
+                            UNUSED()
+                        HAL_TIM_IC_CaptureCallback() <__weak void HAL_TIM_IC_CaptureCallback (TIM_HandleTypeDef *htim) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_tim.c:6190>:
+                            UNUSED()
+                        HAL_TIM_IC_CaptureHalfCpltCallback() <__weak void HAL_TIM_IC_CaptureHalfCpltCallback (TIM_HandleTypeDef *htim) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_tim.c:6205>:
+                            UNUSED()
+                        HAL_TIM_OC_DelayElapsedCallback() <__weak void HAL_TIM_OC_DelayElapsedCallback (TIM_HandleTypeDef *htim) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_tim.c:6175>:
+                            UNUSED()
+                        HAL_TIM_PWM_PulseFinishedCallback() <__weak void HAL_TIM_PWM_PulseFinishedCallback (TIM_HandleTypeDef *htim) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_tim.c:6220>:
+                            UNUSED()
+                        HAL_TIM_PWM_PulseFinishedHalfCpltCallback() <__weak void HAL_TIM_PWM_PulseFinishedHalfCpltCallback (TIM_HandleTypeDef *htim) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_tim.c:6235>:
+                            UNUSED()
+                        HAL_TIM_ErrorCallback() <__weak void HAL_TIM_ErrorCallback (TIM_HandleTypeDef *htim) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_tim.c:6280>:
+                            UNUSED()
+                        HAL_TIMEx_CommutCallback() <__weak void HAL_TIMEx_CommutCallback (TIM_HandleTypeDef *htim) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_tim_ex.c:3139>:
+                            UNUSED()
+                        HAL_TIMEx_CommutHalfCpltCallback() <__weak void HAL_TIMEx_CommutHalfCpltCallback (TIM_HandleTypeDef *htim) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_tim_ex.c:3153>:
+                            UNUSED()
+                        HAL_TIMEx_BreakCallback() <__weak void HAL_TIMEx_BreakCallback (TIM_HandleTypeDef *htim) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_tim_ex.c:3168>:
+                            UNUSED()
+                        HAL_TIMEx_Break2Callback() <__weak void HAL_TIMEx_Break2Callback (TIM_HandleTypeDef *htim) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_tim_ex.c:3183>:
+                            UNUSED()
+                        HAL_TIMEx_EncoderIndexCallback() <__weak void HAL_TIMEx_EncoderIndexCallback (TIM_HandleTypeDef *htim) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_tim_ex.c:3198>:
+                            UNUSED()
+                        HAL_TIMEx_DirectionChangeCallback() <__weak void HAL_TIMEx_DirectionChangeCallback (TIM_HandleTypeDef *htim) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_tim_ex.c:3213>:
+                            UNUSED()
+                        HAL_TIMEx_IndexErrorCallback() <__weak void HAL_TIMEx_IndexErrorCallback (TIM_HandleTypeDef *htim) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_tim_ex.c:3228>:
+                            UNUSED()
+                        HAL_TIMEx_TransitionErrorCallback() <__weak void HAL_TIMEx_TransitionErrorCallback (TIM_HandleTypeDef *htim) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_tim_ex.c:3243>:
+                            UNUSED()
+                    HAL_TIM_Base_MspInit() <__weak void HAL_TIM_Base_MspInit (TIM_HandleTypeDef *htim) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_tim.c:384>:
+                        UNUSED()
+                    TIM_Base_SetConfig() <void TIM_Base_SetConfig (TIM_TypeDef *TIMx, const TIM_Base_InitTypeDef *Structure) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_tim.c:7266>:
+                        IS_TIM_COUNTER_MODE_SELECT_INSTANCE()
+                        IS_TIM_CLOCK_DIVISION_INSTANCE()
+                        MODIFY_REG()
+                        IS_TIM_REPETITION_COUNTER_INSTANCE()
+                        HAL_IS_BIT_SET()
+                        CLEAR_BIT()
+                    TIM_CHANNEL_STATE_SET_ALL()
+                    TIM_CHANNEL_N_STATE_SET_ALL()
+                HAL_TIM_RegisterCallback() <HAL_StatusTypeDef HAL_TIM_RegisterCallback (TIM_HandleTypeDef *htim, HAL_TIM_CallbackIDTypeDef CallbackID, pTIM_CallbackTypeDef pCallback) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_tim.c:6331>:
+                HAL_TIM_Base_Start_IT() <HAL_StatusTypeDef HAL_TIM_Base_Start_IT (TIM_HandleTypeDef *htim) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_tim.c:474>:
+                    assert_param()
+                    IS_TIM_INSTANCE()
+                    __HAL_TIM_ENABLE_IT()
+                    IS_TIM_SLAVE_INSTANCE()
+                    IS_TIM_SLAVEMODE_TRIGGER_ENABLED()
+                    __HAL_TIM_ENABLE()
+            __HAL_RCC_HSI_CALIBRATIONVALUE_ADJUST()
+            __HAL_RCC_HSI_ENABLE()
+            __HAL_RCC_HSI_DISABLE()
+            IS_RCC_LSI()
+            __HAL_RCC_LSI_ENABLE()
+            __HAL_RCC_LSI_DISABLE()
+            IS_RCC_LSE()
+            HAL_IS_BIT_CLR()
+            SET_BIT()
+            __HAL_RCC_LSE_CONFIG()
+            IS_RCC_HSI48()
+            __HAL_RCC_HSI48_ENABLE()
+            __HAL_RCC_HSI48_DISABLE()
+            IS_RCC_PLL()
+            IS_RCC_PLL1_SOURCE()
+            IS_RCC_PLL1_DIVM_VALUE()
+            IS_RCC_PLL1_MULN_VALUE()
+            IS_RCC_PLL1_DIVP_VALUE()
+            IS_RCC_PLL1_DIVQ_VALUE()
+            IS_RCC_PLL1_DIVR_VALUE()
+            __HAL_RCC_PLL1_DISABLE()
+            __HAL_RCC_PLL1_CONFIG()
+            IS_RCC_PLL1_FRACN_VALUE()
+            __HAL_RCC_PLL1_FRACN_DISABLE()
+            __HAL_RCC_PLL1_FRACN_CONFIG()
+            __HAL_RCC_PLL1_FRACN_ENABLE()
+            IS_RCC_PLL1_VCIRGE_VALUE()
+            __HAL_RCC_PLL1_VCIRANGE()
+            IS_RCC_PLL1_VCORGE_VALUE()
+            __HAL_RCC_PLL1_VCORANGE()
+            __HAL_RCC_PLL1_CLKOUT_ENABLE()
+            __HAL_RCC_PLL1_ENABLE()
+        Error_Handler() <void Error_Handler (void) at Core/Src/main.c:263>:
+            __disable_irq()
+        HAL_RCC_ClockConfig() <HAL_StatusTypeDef HAL_RCC_ClockConfig (const RCC_ClkInitTypeDef *pClkInitStruct, uint32_t FLatency) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rcc.c:1032>:
+            assert_param()
+            IS_RCC_CLOCKTYPE()
+            IS_FLASH_LATENCY()
+            __HAL_FLASH_GET_LATENCY()
+            __HAL_FLASH_SET_LATENCY()
+            IS_RCC_PCLK()
+            MODIFY_REG()
+            IS_RCC_HCLK()
+            IS_RCC_SYSCLKSOURCE()
+            READ_BIT()
+            HAL_GetTick() <__weak uint32_t HAL_GetTick (void) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal.c:346>:
+            __HAL_RCC_GET_SYSCLK_SOURCE()
+            HAL_RCC_GetSysClockFreq() <uint32_t HAL_RCC_GetSysClockFreq (void) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rcc.c:1390>:
+                __HAL_RCC_GET_SYSCLK_SOURCE()
+                __HAL_RCC_GET_FLAG()
+                __HAL_RCC_GET_HSI_DIVIDER()
+            HAL_InitTick() <HAL_StatusTypeDef HAL_InitTick (uint32_t TickPriority) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_timebase_tim_template.c:70> (R):
+                READ_BIT()
+                HAL_SYSTICK_GetCLKSourceConfig() <uint32_t HAL_SYSTICK_GetCLKSourceConfig (void) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_cortex.c:463>:
+                    READ_BIT()
+                HAL_SYSTICK_Config() <uint32_t HAL_SYSTICK_Config (uint32_t TicksNumb) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_cortex.c:393>:
+                    WRITE_REG()
+                    SET_BIT()
+                HAL_NVIC_SetPriority() <void HAL_NVIC_SetPriority (IRQn_Type IRQn, uint32_t PreemptPriority, uint32_t SubPriority) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_cortex.c:207>:
+                    assert_param()
+                    IS_NVIC_SUB_PRIORITY()
+                    IS_NVIC_PREEMPTION_PRIORITY()
+                    NVIC_GetPriorityGrouping()
+                    NVIC_SetPriority()
+                    NVIC_EncodePriority()
+                HAL_PWR_EnableBkUpAccess() <void HAL_PWR_EnableBkUpAccess (void) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_pwr.c:106>:
+                    SET_BIT()
+                __HAL_RCC_BACKUPRESET_FORCE()
+                __HAL_RCC_BACKUPRESET_RELEASE()
+                __HAL_RCC_RTC_ENABLE()
+                __HAL_RCC_RTC_CLK_ENABLE()
+                HAL_RCC_OscConfig() <HAL_StatusTypeDef HAL_RCC_OscConfig (const RCC_OscInitTypeDef *pOscInitStruct) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rcc.c:460> (R):
+                    assert_param()
+                    IS_RCC_OSCILLATORTYPE()
+                    __HAL_RCC_GET_SYSCLK_SOURCE()
+                    __HAL_RCC_GET_PLL1_OSCSOURCE()
+                    IS_RCC_CSI()
+                    IS_RCC_CSICALIBRATION_VALUE()
+                    __HAL_RCC_CSI_CALIBRATIONVALUE_ADJUST()
+                    __HAL_RCC_CSI_ENABLE()
+                    HAL_GetTick() <__weak uint32_t HAL_GetTick (void) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal.c:346>:
+                    READ_BIT()
+                    __HAL_RCC_CSI_DISABLE()
+                    IS_RCC_HSE()
+                    __HAL_RCC_HSE_CONFIG()
+                    IS_RCC_HSI()
+                    IS_RCC_HSIDIV()
+                    IS_RCC_HSI_CALIBRATION_VALUE()
+                    __HAL_RCC_GET_HSI_DIVIDER()
+                    __HAL_RCC_HSI_DIVIDER_CONFIG()
+                    HAL_RCC_GetHCLKFreq() <uint32_t HAL_RCC_GetHCLKFreq (void) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rcc.c:1496>:
+                        HAL_RCC_GetSysClockFreq() <uint32_t HAL_RCC_GetSysClockFreq (void) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rcc.c:1390>:
+                            __HAL_RCC_GET_SYSCLK_SOURCE()
+                            __HAL_RCC_GET_FLAG()
+                            __HAL_RCC_GET_HSI_DIVIDER()
+                    HAL_InitTick() <HAL_StatusTypeDef HAL_InitTick (uint32_t TickPriority) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_timebase_tim_template.c:70> (recursive: see 893)
+                    __HAL_RCC_HSI_CALIBRATIONVALUE_ADJUST()
+                    __HAL_RCC_HSI_ENABLE()
+                    __HAL_RCC_HSI_DISABLE()
+                    IS_RCC_LSI()
+                    __HAL_RCC_LSI_ENABLE()
+                    __HAL_RCC_LSI_DISABLE()
+                    IS_RCC_LSE()
+                    HAL_IS_BIT_CLR()
+                    SET_BIT()
+                    __HAL_RCC_LSE_CONFIG()
+                    IS_RCC_HSI48()
+                    __HAL_RCC_HSI48_ENABLE()
+                    __HAL_RCC_HSI48_DISABLE()
+                    IS_RCC_PLL()
+                    IS_RCC_PLL1_SOURCE()
+                    IS_RCC_PLL1_DIVM_VALUE()
+                    IS_RCC_PLL1_MULN_VALUE()
+                    IS_RCC_PLL1_DIVP_VALUE()
+                    IS_RCC_PLL1_DIVQ_VALUE()
+                    IS_RCC_PLL1_DIVR_VALUE()
+                    __HAL_RCC_PLL1_DISABLE()
+                    __HAL_RCC_PLL1_CONFIG()
+                    IS_RCC_PLL1_FRACN_VALUE()
+                    __HAL_RCC_PLL1_FRACN_DISABLE()
+                    __HAL_RCC_PLL1_FRACN_CONFIG()
+                    __HAL_RCC_PLL1_FRACN_ENABLE()
+                    IS_RCC_PLL1_VCIRGE_VALUE()
+                    __HAL_RCC_PLL1_VCIRANGE()
+                    IS_RCC_PLL1_VCORGE_VALUE()
+                    __HAL_RCC_PLL1_VCORANGE()
+                    __HAL_RCC_PLL1_CLKOUT_ENABLE()
+                    __HAL_RCC_PLL1_ENABLE()
+                HAL_RCCEx_PeriphCLKConfig() <HAL_StatusTypeDef HAL_RCCEx_PeriphCLKConfig (const RCC_PeriphCLKInitTypeDef *pPeriphClkInit) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rcc_ex.c:154>:
+                    assert_param()
+                    IS_RCC_PERIPHCLOCK()
+                    IS_RCC_CLKPSOURCE()
+                    __HAL_RCC_CLKP_CONFIG()
+                    IS_RCC_USART1CLKSOURCE()
+                    RCCEx_PLL2_Config() <HAL_StatusTypeDef RCCEx_PLL2_Config (const RCC_PLL2InitTypeDef *pll2) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rcc_ex.c:6208>:
+                        assert_param()
+                        IS_RCC_PLL2_SOURCE()
+                        IS_RCC_PLL2_DIVM_VALUE()
+                        IS_RCC_PLL2_MULN_VALUE()
+                        IS_RCC_PLL2_DIVP_VALUE()
+                        IS_RCC_PLL2_DIVQ_VALUE()
+                        IS_RCC_PLL2_DIVR_VALUE()
+                        IS_RCC_PLL2_CLOCKOUT_VALUE()
+                        IS_RCC_PLL2_VCIRGE_VALUE()
+                        IS_RCC_PLL2_VCORGE_VALUE()
+                        IS_RCC_PLL2_FRACN_VALUE()
+                        __HAL_RCC_PLL2_DISABLE()
+                        HAL_GetTick() <__weak uint32_t HAL_GetTick (void) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal.c:346>:
+                        __HAL_RCC_GET_FLAG()
+                        __HAL_RCC_PLL2_CONFIG()
+                        __HAL_RCC_PLL2_VCIRANGE()
+                        __HAL_RCC_PLL2_VCORANGE()
+                        __HAL_RCC_PLL2_CLKOUT_ENABLE()
+                        __HAL_RCC_PLL2_FRACN_DISABLE()
+                        __HAL_RCC_PLL2_FRACN_CONFIG()
+                        __HAL_RCC_PLL2_FRACN_ENABLE()
+                        __HAL_RCC_PLL2_ENABLE()
+                    RCCEx_PLL3_Config() <HAL_StatusTypeDef RCCEx_PLL3_Config (const RCC_PLL3InitTypeDef *pll3) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rcc_ex.c:6290>:
+                        assert_param()
+                        IS_RCC_PLL3_SOURCE()
+                        IS_RCC_PLL3_DIVM_VALUE()
+                        IS_RCC_PLL3_MULN_VALUE()
+                        IS_RCC_PLL3_DIVP_VALUE()
+                        IS_RCC_PLL3_DIVQ_VALUE()
+                        IS_RCC_PLL3_DIVR_VALUE()
+                        IS_RCC_PLL3_CLOCKOUT_VALUE()
+                        IS_RCC_PLL3_VCIRGE_VALUE()
+                        IS_RCC_PLL3_VCORGE_VALUE()
+                        IS_RCC_PLL3_FRACN_VALUE()
+                        __HAL_RCC_PLL3_DISABLE()
+                        HAL_GetTick() <__weak uint32_t HAL_GetTick (void) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal.c:346>:
+                        __HAL_RCC_GET_FLAG()
+                        __HAL_RCC_PLL3_CONFIG()
+                        __HAL_RCC_PLL3_VCIRANGE()
+                        __HAL_RCC_PLL3_VCORANGE()
+                        __HAL_RCC_PLL3_CLKOUT_ENABLE()
+                        __HAL_RCC_PLL3_FRACN_DISABLE()
+                        __HAL_RCC_PLL3_FRACN_CONFIG()
+                        __HAL_RCC_PLL3_FRACN_ENABLE()
+                        __HAL_RCC_PLL3_ENABLE()
+                    __HAL_RCC_USART1_CONFIG()
+                    IS_RCC_USART2CLKSOURCE()
+                    __HAL_RCC_USART2_CONFIG()
+                    IS_RCC_USART3CLKSOURCE()
+                    __HAL_RCC_USART3_CONFIG()
+                    IS_RCC_UART4CLKSOURCE()
+                    __HAL_RCC_UART4_CONFIG()
+                    IS_RCC_UART5CLKSOURCE()
+                    __HAL_RCC_UART5_CONFIG()
+                    IS_RCC_USART6CLKSOURCE()
+                    __HAL_RCC_USART6_CONFIG()
+                    IS_RCC_UART7CLKSOURCE()
+                    __HAL_RCC_UART7_CONFIG()
+                    IS_RCC_UART8CLKSOURCE()
+                    __HAL_RCC_UART8_CONFIG()
+                    IS_RCC_UART9CLKSOURCE()
+                    __HAL_RCC_UART9_CONFIG()
+                    IS_RCC_USART10CLKSOURCE()
+                    __HAL_RCC_USART10_CONFIG()
+                    IS_RCC_USART11CLKSOURCE()
+                    __HAL_RCC_USART11_CONFIG()
+                    IS_RCC_UART12CLKSOURCE()
+                    __HAL_RCC_UART12_CONFIG()
+                    IS_RCC_LPUART1CLKSOURCE()
+                    __HAL_RCC_LPUART1_CONFIG()
+                    IS_RCC_I2C1CLKSOURCE()
+                    __HAL_RCC_I2C1_CONFIG()
+                    IS_RCC_I2C2CLKSOURCE()
+                    __HAL_RCC_I2C2_CONFIG()
+                    IS_RCC_I2C3CLKSOURCE()
+                    __HAL_RCC_I2C3_CONFIG()
+                    IS_RCC_I2C4CLKSOURCE()
+                    __HAL_RCC_I2C4_CONFIG()
+                    IS_RCC_I3C1CLKSOURCE()
+                    __HAL_RCC_I3C1_CONFIG()
+                    IS_RCC_I3C2CLKSOURCE()
+                    __HAL_RCC_I3C2_CONFIG()
+                    IS_RCC_TIMPRES()
+                    __HAL_RCC_TIMCLKPRESCALER()
+                    IS_RCC_LPTIM1CLK()
+                    __HAL_RCC_LPTIM1_CONFIG()
+                    IS_RCC_LPTIM2CLK()
+                    __HAL_RCC_LPTIM2_CONFIG()
+                    IS_RCC_LPTIM3CLK()
+                    __HAL_RCC_LPTIM3_CONFIG()
+                    IS_RCC_LPTIM4CLK()
+                    __HAL_RCC_LPTIM4_CONFIG()
+                    IS_RCC_LPTIM5CLK()
+                    __HAL_RCC_LPTIM5_CONFIG()
+                    IS_RCC_LPTIM6CLK()
+                    __HAL_RCC_LPTIM6_CONFIG()
+                    IS_RCC_SAI1CLK()
+                    __HAL_RCC_PLL1_CLKOUT_ENABLE()
+                    __HAL_RCC_SAI1_CONFIG()
+                    IS_RCC_SAI2CLK()
+                    __HAL_RCC_SAI2_CONFIG()
+                    IS_RCC_ADCDACCLKSOURCE()
+                    __HAL_RCC_ADCDAC_CONFIG()
+                    IS_RCC_DACLPCLKSOURCE()
+                    __HAL_RCC_DAC_LP_CONFIG()
+                    IS_RCC_RTCCLKSOURCE()
+                    SET_BIT()
+                    HAL_GetTick() <__weak uint32_t HAL_GetTick (void) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal.c:346>:
+                    HAL_IS_BIT_CLR()
+                    READ_BIT()
+                    __HAL_RCC_BACKUPRESET_FORCE()
+                    __HAL_RCC_BACKUPRESET_RELEASE()
+                    HAL_IS_BIT_SET()
+                    __HAL_RCC_RTC_CONFIG()
+                    IS_RCC_RNGCLKSOURCE()
+                    __HAL_RCC_RNG_CONFIG()
+                    IS_RCC_SDMMC1CLKSOURCE()
+                    __HAL_RCC_SDMMC1_CONFIG()
+                    IS_RCC_SDMMC2CLKSOURCE()
+                    __HAL_RCC_SDMMC2_CONFIG()
+                    IS_RCC_SPI1CLKSOURCE()
+                    __HAL_RCC_SPI1_CONFIG()
+                    IS_RCC_SPI2CLKSOURCE()
+                    __HAL_RCC_SPI2_CONFIG()
+                    IS_RCC_SPI3CLKSOURCE()
+                    __HAL_RCC_SPI3_CONFIG()
+                    IS_RCC_SPI4CLKSOURCE()
+                    __HAL_RCC_SPI4_CONFIG()
+                    IS_RCC_SPI5CLKSOURCE()
+                    __HAL_RCC_SPI5_CONFIG()
+                    IS_RCC_SPI6CLKSOURCE()
+                    __HAL_RCC_SPI6_CONFIG()
+                    IS_RCC_OSPICLKSOURCE()
+                    __HAL_RCC_OSPI_CONFIG()
+                    IS_RCC_FDCANCLK()
+                    __HAL_RCC_FDCAN_CONFIG()
+                    IS_RCC_USBCLKSOURCE()
+                    __HAL_RCC_USB_CONFIG()
+                    IS_RCC_CECCLKSOURCE()
+                    __HAL_RCC_CEC_CONFIG()
+                HAL_RTC_Init() <HAL_StatusTypeDef HAL_RTC_Init (RTC_HandleTypeDef *hrtc) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc.c:263>:
+                    assert_param()
+                    IS_RTC_ALL_INSTANCE()
+                    IS_RTC_HOUR_FORMAT()
+                    IS_RTC_ASYNCH_PREDIV()
+                    IS_RTC_SYNCH_PREDIV()
+                    IS_RTC_OUTPUT()
+                    IS_RTC_OUTPUT_POL()
+                    IS_RTC_OUTPUT_TYPE()
+                    IS_RTC_OUTPUT_PULLUP()
+                    IS_RTC_OUTPUT_REMAP()
+                    IS_RTC_BINARY_MODE()
+                    IS_RTC_BINARY_MIX_BCDU()
+                    HAL_RTC_AlarmAEventCallback() <__weak void HAL_RTC_AlarmAEventCallback (RTC_HandleTypeDef *hrtc) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc.c:2034>:
+                        UNUSED()
+                    HAL_RTCEx_AlarmBEventCallback() <__weak void HAL_RTCEx_AlarmBEventCallback (RTC_HandleTypeDef *hrtc) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc_ex.c:1473>:
+                        UNUSED()
+                    HAL_RTCEx_TimeStampEventCallback() <__weak void HAL_RTCEx_TimeStampEventCallback (RTC_HandleTypeDef *hrtc) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc_ex.c:500>:
+                        UNUSED()
+                    HAL_RTCEx_WakeUpTimerEventCallback() <__weak void HAL_RTCEx_WakeUpTimerEventCallback (RTC_HandleTypeDef *hrtc) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc_ex.c:798>:
+                        UNUSED()
+                    HAL_RTCEx_SSRUEventCallback() <__weak void HAL_RTCEx_SSRUEventCallback (RTC_HandleTypeDef *hrtc) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc_ex.c:1439>:
+                        UNUSED()
+                    HAL_RTCEx_Tamper1EventCallback() <__weak void HAL_RTCEx_Tamper1EventCallback (RTC_HandleTypeDef *hrtc) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc_ex.c:2449>:
+                        UNUSED()
+                    HAL_RTCEx_Tamper2EventCallback() <__weak void HAL_RTCEx_Tamper2EventCallback (RTC_HandleTypeDef *hrtc) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc_ex.c:2464>:
+                        UNUSED()
+                    HAL_RTCEx_Tamper3EventCallback() <__weak void HAL_RTCEx_Tamper3EventCallback (RTC_HandleTypeDef *hrtc) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc_ex.c:2479>:
+                        UNUSED()
+                    HAL_RTCEx_Tamper4EventCallback() <__weak void HAL_RTCEx_Tamper4EventCallback (RTC_HandleTypeDef *hrtc) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc_ex.c:2494>:
+                        UNUSED()
+                    HAL_RTCEx_Tamper5EventCallback() <__weak void HAL_RTCEx_Tamper5EventCallback (RTC_HandleTypeDef *hrtc) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc_ex.c:2509>:
+                        UNUSED()
+                    HAL_RTCEx_Tamper6EventCallback() <__weak void HAL_RTCEx_Tamper6EventCallback (RTC_HandleTypeDef *hrtc) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc_ex.c:2524>:
+                        UNUSED()
+                    HAL_RTCEx_Tamper7EventCallback() <__weak void HAL_RTCEx_Tamper7EventCallback (RTC_HandleTypeDef *hrtc) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc_ex.c:2539>:
+                        UNUSED()
+                    HAL_RTCEx_Tamper8EventCallback() <__weak void HAL_RTCEx_Tamper8EventCallback (RTC_HandleTypeDef *hrtc) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc_ex.c:2554>:
+                        UNUSED()
+                    HAL_RTCEx_InternalTamper1EventCallback() <__weak void HAL_RTCEx_InternalTamper1EventCallback (RTC_HandleTypeDef *hrtc) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc_ex.c:2569>:
+                        UNUSED()
+                    HAL_RTCEx_InternalTamper2EventCallback() <__weak void HAL_RTCEx_InternalTamper2EventCallback (RTC_HandleTypeDef *hrtc) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc_ex.c:2584>:
+                        UNUSED()
+                    HAL_RTCEx_InternalTamper3EventCallback() <__weak void HAL_RTCEx_InternalTamper3EventCallback (RTC_HandleTypeDef *hrtc) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc_ex.c:2599>:
+                        UNUSED()
+                    HAL_RTCEx_InternalTamper4EventCallback() <__weak void HAL_RTCEx_InternalTamper4EventCallback (RTC_HandleTypeDef *hrtc) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc_ex.c:2614>:
+                        UNUSED()
+                    HAL_RTCEx_InternalTamper5EventCallback() <__weak void HAL_RTCEx_InternalTamper5EventCallback (RTC_HandleTypeDef *hrtc) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc_ex.c:2629>:
+                        UNUSED()
+                    HAL_RTCEx_InternalTamper6EventCallback() <__weak void HAL_RTCEx_InternalTamper6EventCallback (RTC_HandleTypeDef *hrtc) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc_ex.c:2644>:
+                        UNUSED()
+                    HAL_RTCEx_InternalTamper7EventCallback() <__weak void HAL_RTCEx_InternalTamper7EventCallback (RTC_HandleTypeDef *hrtc) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc_ex.c:2659>:
+                        UNUSED()
+                    HAL_RTCEx_InternalTamper8EventCallback() <__weak void HAL_RTCEx_InternalTamper8EventCallback (RTC_HandleTypeDef *hrtc) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc_ex.c:2674>:
+                        UNUSED()
+                    HAL_RTCEx_InternalTamper9EventCallback() <__weak void HAL_RTCEx_InternalTamper9EventCallback (RTC_HandleTypeDef *hrtc) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc_ex.c:2689>:
+                        UNUSED()
+                    HAL_RTCEx_InternalTamper11EventCallback() <__weak void HAL_RTCEx_InternalTamper11EventCallback (RTC_HandleTypeDef *hrtc) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc_ex.c:2704>:
+                        UNUSED()
+                    HAL_RTCEx_InternalTamper12EventCallback() <__weak void HAL_RTCEx_InternalTamper12EventCallback (RTC_HandleTypeDef *hrtc) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc_ex.c:2719>:
+                        UNUSED()
+                    HAL_RTCEx_InternalTamper13EventCallback() <__weak void HAL_RTCEx_InternalTamper13EventCallback (RTC_HandleTypeDef *hrtc) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc_ex.c:2734>:
+                        UNUSED()
+                    HAL_RTCEx_InternalTamper15EventCallback() <__weak void HAL_RTCEx_InternalTamper15EventCallback (RTC_HandleTypeDef *hrtc) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc_ex.c:2749>:
+                        UNUSED()
+                    HAL_RTC_MspInit() <__weak void HAL_RTC_MspInit (RTC_HandleTypeDef *hrtc) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc.c:954>:
+                        UNUSED()
+                    HAL_RTC_MspDeInit() <__weak void HAL_RTC_MspDeInit (RTC_HandleTypeDef *hrtc) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc.c:969>:
+                        UNUSED()
+                    __HAL_RTC_IS_CALENDAR_INITIALIZED()
+                    __HAL_RTC_WRITEPROTECTION_DISABLE()
+                    RTC_EnterInitMode() <HAL_StatusTypeDef RTC_EnterInitMode (RTC_HandleTypeDef *hrtc) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc.c:2192>:
+                        READ_BIT()
+                        SET_BIT()
+                        HAL_GetTick() <__weak uint32_t HAL_GetTick (void) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal.c:346>:
+                    CLEAR_BIT()
+                    SET_BIT()
+                    WRITE_REG()
+                    MODIFY_REG()
+                    RTC_ExitInitMode() <HAL_StatusTypeDef RTC_ExitInitMode (RTC_HandleTypeDef *hrtc) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc.c:2233>:
+                        CLEAR_BIT()
+                        READ_BIT()
+                        HAL_RTC_WaitForSynchro() <HAL_StatusTypeDef HAL_RTC_WaitForSynchro (RTC_HandleTypeDef *hrtc) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc.c:2115>:
+                            CLEAR_BIT()
+                            HAL_GetTick() <__weak uint32_t HAL_GetTick (void) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal.c:346>:
+                            READ_BIT()
+                        SET_BIT()
+                    __HAL_RTC_WRITEPROTECTION_ENABLE()
+                HAL_RTC_RegisterCallback() <HAL_StatusTypeDef HAL_RTC_RegisterCallback (RTC_HandleTypeDef *hrtc, HAL_RTC_CallbackIDTypeDef CallbackID, pRTC_CallbackTypeDef pCallback) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc.c:571>:
+                HAL_RTC_SetAlarm_IT() <HAL_StatusTypeDef HAL_RTC_SetAlarm_IT (RTC_HandleTypeDef *hrtc, RTC_AlarmTypeDef *sAlarm, uint32_t Format) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc.c:1629>:
+                    __HAL_LOCK()
+                    READ_BIT()
+                    assert_param()
+                    IS_RTC_FORMAT()
+                    IS_RTC_ALARM()
+                    IS_RTC_ALARM_MASK()
+                    IS_RTC_ALARM_DATE_WEEKDAY_SEL()
+                    IS_RTC_ALARM_SUB_SECOND_VALUE()
+                    IS_RTC_ALARM_SUB_SECOND_MASK()
+                    IS_RTC_ALARM_SUB_SECOND_BINARY_MASK()
+                    IS_RTC_ALARMSUBSECONDBIN_AUTOCLR()
+                    IS_RTC_HOUR12()
+                    IS_RTC_HOURFORMAT12()
+                    IS_RTC_HOUR24()
+                    IS_RTC_MINUTES()
+                    IS_RTC_SECONDS()
+                    IS_RTC_ALARM_DATE_WEEKDAY_DATE()
+                    IS_RTC_ALARM_DATE_WEEKDAY_WEEKDAY()
+                    RTC_ByteToBcd2() <uint8_t RTC_ByteToBcd2 (uint8_t Value) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc.c:2271>:
+                    RTC_Bcd2ToByte() <uint8_t RTC_Bcd2ToByte (uint8_t Value) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc.c:2290>:
+                    CLEAR_BIT()
+                    WRITE_REG()
+                    SET_BIT()
+                    __HAL_UNLOCK()
+                HAL_NVIC_EnableIRQ() <void HAL_NVIC_EnableIRQ (IRQn_Type IRQn) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_cortex.c:230>:
+                    assert_param()
+                    IS_NVIC_DEVICE_IRQ()
+                    NVIC_EnableIRQ()
+                HAL_RTCEx_SetWakeUpTimer_IT() <HAL_StatusTypeDef HAL_RTCEx_SetWakeUpTimer_IT (RTC_HandleTypeDef *hrtc, uint32_t WakeUpCounter, uint32_t WakeUpClock, uint32_t WakeUpAutoClr) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rtc_ex.c:655>:
+                    assert_param()
+                    IS_RTC_WAKEUP_CLOCK()
+                    IS_RTC_WAKEUP_COUNTER()
+                    __HAL_LOCK()
+                    CLEAR_BIT()
+                    WRITE_REG()
+                    READ_BIT()
+                    HAL_GetTick() <__weak uint32_t HAL_GetTick (void) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal.c:346>:
+                    __HAL_UNLOCK()
+                    MODIFY_REG()
+                    SET_BIT()
+                __HAL_RCC_TIM6_CLK_ENABLE()
+                HAL_RCC_GetClockConfig() <void HAL_RCC_GetClockConfig (RCC_ClkInitTypeDef *pClkInitStruct, uint32_t *pFLatency) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rcc.c:1624>:
+                    assert_param()
+                HAL_RCC_GetPCLK1Freq() <uint32_t HAL_RCC_GetPCLK1Freq (void) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rcc.c:1511>:
+                    HAL_RCC_GetHCLKFreq() <uint32_t HAL_RCC_GetHCLKFreq (void) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rcc.c:1496>:
+                        HAL_RCC_GetSysClockFreq() <uint32_t HAL_RCC_GetSysClockFreq (void) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rcc.c:1390>:
+                            __HAL_RCC_GET_SYSCLK_SOURCE()
+                            __HAL_RCC_GET_FLAG()
+                            __HAL_RCC_GET_HSI_DIVIDER()
+                HAL_TIM_Base_Init() <HAL_StatusTypeDef HAL_TIM_Base_Init (TIM_HandleTypeDef *htim) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_tim.c:281>:
+                    assert_param()
+                    IS_TIM_INSTANCE()
+                    IS_TIM_COUNTER_MODE()
+                    IS_TIM_CLOCKDIVISION_DIV()
+                    IS_TIM_PERIOD()
+                    IS_TIM_AUTORELOAD_PRELOAD()
+                    TIM_ResetCallback() <void TIM_ResetCallback (TIM_HandleTypeDef *htim) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_tim.c:8238>:
+                        HAL_TIM_PeriodElapsedCallback() <__weak void HAL_TIM_PeriodElapsedCallback (TIM_HandleTypeDef *htim) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_tim.c:6145>:
+                            UNUSED()
+                        HAL_TIM_PeriodElapsedHalfCpltCallback() <__weak void HAL_TIM_PeriodElapsedHalfCpltCallback (TIM_HandleTypeDef *htim) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_tim.c:6160>:
+                            UNUSED()
+                        HAL_TIM_TriggerCallback() <__weak void HAL_TIM_TriggerCallback (TIM_HandleTypeDef *htim) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_tim.c:6250>:
+                            UNUSED()
+                        HAL_TIM_TriggerHalfCpltCallback() <__weak void HAL_TIM_TriggerHalfCpltCallback (TIM_HandleTypeDef *htim) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_tim.c:6265>:
+                            UNUSED()
+                        HAL_TIM_IC_CaptureCallback() <__weak void HAL_TIM_IC_CaptureCallback (TIM_HandleTypeDef *htim) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_tim.c:6190>:
+                            UNUSED()
+                        HAL_TIM_IC_CaptureHalfCpltCallback() <__weak void HAL_TIM_IC_CaptureHalfCpltCallback (TIM_HandleTypeDef *htim) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_tim.c:6205>:
+                            UNUSED()
+                        HAL_TIM_OC_DelayElapsedCallback() <__weak void HAL_TIM_OC_DelayElapsedCallback (TIM_HandleTypeDef *htim) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_tim.c:6175>:
+                            UNUSED()
+                        HAL_TIM_PWM_PulseFinishedCallback() <__weak void HAL_TIM_PWM_PulseFinishedCallback (TIM_HandleTypeDef *htim) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_tim.c:6220>:
+                            UNUSED()
+                        HAL_TIM_PWM_PulseFinishedHalfCpltCallback() <__weak void HAL_TIM_PWM_PulseFinishedHalfCpltCallback (TIM_HandleTypeDef *htim) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_tim.c:6235>:
+                            UNUSED()
+                        HAL_TIM_ErrorCallback() <__weak void HAL_TIM_ErrorCallback (TIM_HandleTypeDef *htim) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_tim.c:6280>:
+                            UNUSED()
+                        HAL_TIMEx_CommutCallback() <__weak void HAL_TIMEx_CommutCallback (TIM_HandleTypeDef *htim) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_tim_ex.c:3139>:
+                            UNUSED()
+                        HAL_TIMEx_CommutHalfCpltCallback() <__weak void HAL_TIMEx_CommutHalfCpltCallback (TIM_HandleTypeDef *htim) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_tim_ex.c:3153>:
+                            UNUSED()
+                        HAL_TIMEx_BreakCallback() <__weak void HAL_TIMEx_BreakCallback (TIM_HandleTypeDef *htim) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_tim_ex.c:3168>:
+                            UNUSED()
+                        HAL_TIMEx_Break2Callback() <__weak void HAL_TIMEx_Break2Callback (TIM_HandleTypeDef *htim) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_tim_ex.c:3183>:
+                            UNUSED()
+                        HAL_TIMEx_EncoderIndexCallback() <__weak void HAL_TIMEx_EncoderIndexCallback (TIM_HandleTypeDef *htim) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_tim_ex.c:3198>:
+                            UNUSED()
+                        HAL_TIMEx_DirectionChangeCallback() <__weak void HAL_TIMEx_DirectionChangeCallback (TIM_HandleTypeDef *htim) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_tim_ex.c:3213>:
+                            UNUSED()
+                        HAL_TIMEx_IndexErrorCallback() <__weak void HAL_TIMEx_IndexErrorCallback (TIM_HandleTypeDef *htim) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_tim_ex.c:3228>:
+                            UNUSED()
+                        HAL_TIMEx_TransitionErrorCallback() <__weak void HAL_TIMEx_TransitionErrorCallback (TIM_HandleTypeDef *htim) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_tim_ex.c:3243>:
+                            UNUSED()
+                    HAL_TIM_Base_MspInit() <__weak void HAL_TIM_Base_MspInit (TIM_HandleTypeDef *htim) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_tim.c:384>:
+                        UNUSED()
+                    TIM_Base_SetConfig() <void TIM_Base_SetConfig (TIM_TypeDef *TIMx, const TIM_Base_InitTypeDef *Structure) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_tim.c:7266>:
+                        IS_TIM_COUNTER_MODE_SELECT_INSTANCE()
+                        IS_TIM_CLOCK_DIVISION_INSTANCE()
+                        MODIFY_REG()
+                        IS_TIM_REPETITION_COUNTER_INSTANCE()
+                        HAL_IS_BIT_SET()
+                        CLEAR_BIT()
+                    TIM_CHANNEL_STATE_SET_ALL()
+                    TIM_CHANNEL_N_STATE_SET_ALL()
+                HAL_TIM_RegisterCallback() <HAL_StatusTypeDef HAL_TIM_RegisterCallback (TIM_HandleTypeDef *htim, HAL_TIM_CallbackIDTypeDef CallbackID, pTIM_CallbackTypeDef pCallback) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_tim.c:6331>:
+                HAL_TIM_Base_Start_IT() <HAL_StatusTypeDef HAL_TIM_Base_Start_IT (TIM_HandleTypeDef *htim) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_tim.c:474>:
+                    assert_param()
+                    IS_TIM_INSTANCE()
+                    __HAL_TIM_ENABLE_IT()
+                    IS_TIM_SLAVE_INSTANCE()
+                    IS_TIM_SLAVEMODE_TRIGGER_ENABLED()
+                    __HAL_TIM_ENABLE()
+        __HAL_FLASH_SET_PROGRAM_DELAY()
+    MX_GPIO_Init() <void MX_GPIO_Init (void) at Core/Src/main.c:243>:
+        __HAL_RCC_GPIOA_CLK_ENABLE()
+    MX_USART2_UART_Init() <void MX_USART2_UART_Init (void) at Core/Src/main.c:195>:
+        HAL_UART_Init() <HAL_StatusTypeDef HAL_UART_Init (UART_HandleTypeDef *huart) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_uart.c:309>:
+            assert_param()
+            IS_UART_HWFLOW_INSTANCE()
+            IS_UART_INSTANCE()
+            IS_LPUART_INSTANCE()
+            UART_InitCallbacksToDefault() <void UART_InitCallbacksToDefault (UART_HandleTypeDef *huart) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_uart.c:3165>:
+                HAL_UART_TxHalfCpltCallback() <__weak void HAL_UART_TxHalfCpltCallback (UART_HandleTypeDef *huart) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_uart.c:2739>:
+                    UNUSED()
+                HAL_UART_TxCpltCallback() <__weak void HAL_UART_TxCpltCallback (UART_HandleTypeDef *huart) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_uart.c:2724>:
+                    UNUSED()
+                HAL_UART_RxHalfCpltCallback() <__weak void HAL_UART_RxHalfCpltCallback (UART_HandleTypeDef *huart) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_uart.c:2769>:
+                    UNUSED()
+                HAL_UART_RxCpltCallback() <__weak void HAL_UART_RxCpltCallback (UART_HandleTypeDef *huart) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_uart.c:2754>:
+                    UNUSED()
+                HAL_UART_ErrorCallback() <__weak void HAL_UART_ErrorCallback (UART_HandleTypeDef *huart) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_uart.c:2784>:
+                    UNUSED()
+                HAL_UART_AbortCpltCallback() <__weak void HAL_UART_AbortCpltCallback (UART_HandleTypeDef *huart) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_uart.c:2799>:
+                    UNUSED()
+                HAL_UART_AbortTransmitCpltCallback() <__weak void HAL_UART_AbortTransmitCpltCallback (UART_HandleTypeDef *huart) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_uart.c:2814>:
+                    UNUSED()
+                HAL_UART_AbortReceiveCpltCallback() <__weak void HAL_UART_AbortReceiveCpltCallback (UART_HandleTypeDef *huart) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_uart.c:2829>:
+                    UNUSED()
+                HAL_UARTEx_WakeupCallback() <__weak void HAL_UARTEx_WakeupCallback (UART_HandleTypeDef *huart) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_uart_ex.c:274>:
+                    UNUSED()
+                HAL_UARTEx_RxFifoFullCallback() <__weak void HAL_UARTEx_RxFifoFullCallback (UART_HandleTypeDef *huart) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_uart_ex.c:289>:
+                    UNUSED()
+                HAL_UARTEx_TxFifoEmptyCallback() <__weak void HAL_UARTEx_TxFifoEmptyCallback (UART_HandleTypeDef *huart) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_uart_ex.c:304>:
+                    UNUSED()
+                HAL_UARTEx_RxEventCallback() <__weak void HAL_UARTEx_RxEventCallback (UART_HandleTypeDef *huart, uint16_t Size) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_uart.c:2846>:
+                    UNUSED()
+            HAL_UART_MspInit() <__weak void HAL_UART_MspInit (UART_HandleTypeDef *huart) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_uart.c:681>:
+                HAL_RCCEx_PeriphCLKConfig() <HAL_StatusTypeDef HAL_RCCEx_PeriphCLKConfig (const RCC_PeriphCLKInitTypeDef *pPeriphClkInit) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rcc_ex.c:154>:
+                    assert_param()
+                    IS_RCC_PERIPHCLOCK()
+                    IS_RCC_CLKPSOURCE()
+                    __HAL_RCC_CLKP_CONFIG()
+                    IS_RCC_USART1CLKSOURCE()
+                    RCCEx_PLL2_Config() <HAL_StatusTypeDef RCCEx_PLL2_Config (const RCC_PLL2InitTypeDef *pll2) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rcc_ex.c:6208>:
+                        assert_param()
+                        IS_RCC_PLL2_SOURCE()
+                        IS_RCC_PLL2_DIVM_VALUE()
+                        IS_RCC_PLL2_MULN_VALUE()
+                        IS_RCC_PLL2_DIVP_VALUE()
+                        IS_RCC_PLL2_DIVQ_VALUE()
+                        IS_RCC_PLL2_DIVR_VALUE()
+                        IS_RCC_PLL2_CLOCKOUT_VALUE()
+                        IS_RCC_PLL2_VCIRGE_VALUE()
+                        IS_RCC_PLL2_VCORGE_VALUE()
+                        IS_RCC_PLL2_FRACN_VALUE()
+                        __HAL_RCC_PLL2_DISABLE()
+                        HAL_GetTick() <__weak uint32_t HAL_GetTick (void) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal.c:346>:
+                        __HAL_RCC_GET_FLAG()
+                        __HAL_RCC_PLL2_CONFIG()
+                        __HAL_RCC_PLL2_VCIRANGE()
+                        __HAL_RCC_PLL2_VCORANGE()
+                        __HAL_RCC_PLL2_CLKOUT_ENABLE()
+                        __HAL_RCC_PLL2_FRACN_DISABLE()
+                        __HAL_RCC_PLL2_FRACN_CONFIG()
+                        __HAL_RCC_PLL2_FRACN_ENABLE()
+                        __HAL_RCC_PLL2_ENABLE()
+                    RCCEx_PLL3_Config() <HAL_StatusTypeDef RCCEx_PLL3_Config (const RCC_PLL3InitTypeDef *pll3) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rcc_ex.c:6290>:
+                        assert_param()
+                        IS_RCC_PLL3_SOURCE()
+                        IS_RCC_PLL3_DIVM_VALUE()
+                        IS_RCC_PLL3_MULN_VALUE()
+                        IS_RCC_PLL3_DIVP_VALUE()
+                        IS_RCC_PLL3_DIVQ_VALUE()
+                        IS_RCC_PLL3_DIVR_VALUE()
+                        IS_RCC_PLL3_CLOCKOUT_VALUE()
+                        IS_RCC_PLL3_VCIRGE_VALUE()
+                        IS_RCC_PLL3_VCORGE_VALUE()
+                        IS_RCC_PLL3_FRACN_VALUE()
+                        __HAL_RCC_PLL3_DISABLE()
+                        HAL_GetTick() <__weak uint32_t HAL_GetTick (void) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal.c:346>:
+                        __HAL_RCC_GET_FLAG()
+                        __HAL_RCC_PLL3_CONFIG()
+                        __HAL_RCC_PLL3_VCIRANGE()
+                        __HAL_RCC_PLL3_VCORANGE()
+                        __HAL_RCC_PLL3_CLKOUT_ENABLE()
+                        __HAL_RCC_PLL3_FRACN_DISABLE()
+                        __HAL_RCC_PLL3_FRACN_CONFIG()
+                        __HAL_RCC_PLL3_FRACN_ENABLE()
+                        __HAL_RCC_PLL3_ENABLE()
+                    __HAL_RCC_USART1_CONFIG()
+                    IS_RCC_USART2CLKSOURCE()
+                    __HAL_RCC_USART2_CONFIG()
+                    IS_RCC_USART3CLKSOURCE()
+                    __HAL_RCC_USART3_CONFIG()
+                    IS_RCC_UART4CLKSOURCE()
+                    __HAL_RCC_UART4_CONFIG()
+                    IS_RCC_UART5CLKSOURCE()
+                    __HAL_RCC_UART5_CONFIG()
+                    IS_RCC_USART6CLKSOURCE()
+                    __HAL_RCC_USART6_CONFIG()
+                    IS_RCC_UART7CLKSOURCE()
+                    __HAL_RCC_UART7_CONFIG()
+                    IS_RCC_UART8CLKSOURCE()
+                    __HAL_RCC_UART8_CONFIG()
+                    IS_RCC_UART9CLKSOURCE()
+                    __HAL_RCC_UART9_CONFIG()
+                    IS_RCC_USART10CLKSOURCE()
+                    __HAL_RCC_USART10_CONFIG()
+                    IS_RCC_USART11CLKSOURCE()
+                    __HAL_RCC_USART11_CONFIG()
+                    IS_RCC_UART12CLKSOURCE()
+                    __HAL_RCC_UART12_CONFIG()
+                    IS_RCC_LPUART1CLKSOURCE()
+                    __HAL_RCC_LPUART1_CONFIG()
+                    IS_RCC_I2C1CLKSOURCE()
+                    __HAL_RCC_I2C1_CONFIG()
+                    IS_RCC_I2C2CLKSOURCE()
+                    __HAL_RCC_I2C2_CONFIG()
+                    IS_RCC_I2C3CLKSOURCE()
+                    __HAL_RCC_I2C3_CONFIG()
+                    IS_RCC_I2C4CLKSOURCE()
+                    __HAL_RCC_I2C4_CONFIG()
+                    IS_RCC_I3C1CLKSOURCE()
+                    __HAL_RCC_I3C1_CONFIG()
+                    IS_RCC_I3C2CLKSOURCE()
+                    __HAL_RCC_I3C2_CONFIG()
+                    IS_RCC_TIMPRES()
+                    __HAL_RCC_TIMCLKPRESCALER()
+                    IS_RCC_LPTIM1CLK()
+                    __HAL_RCC_LPTIM1_CONFIG()
+                    IS_RCC_LPTIM2CLK()
+                    __HAL_RCC_LPTIM2_CONFIG()
+                    IS_RCC_LPTIM3CLK()
+                    __HAL_RCC_LPTIM3_CONFIG()
+                    IS_RCC_LPTIM4CLK()
+                    __HAL_RCC_LPTIM4_CONFIG()
+                    IS_RCC_LPTIM5CLK()
+                    __HAL_RCC_LPTIM5_CONFIG()
+                    IS_RCC_LPTIM6CLK()
+                    __HAL_RCC_LPTIM6_CONFIG()
+                    IS_RCC_SAI1CLK()
+                    __HAL_RCC_PLL1_CLKOUT_ENABLE()
+                    __HAL_RCC_SAI1_CONFIG()
+                    IS_RCC_SAI2CLK()
+                    __HAL_RCC_SAI2_CONFIG()
+                    IS_RCC_ADCDACCLKSOURCE()
+                    __HAL_RCC_ADCDAC_CONFIG()
+                    IS_RCC_DACLPCLKSOURCE()
+                    __HAL_RCC_DAC_LP_CONFIG()
+                    IS_RCC_RTCCLKSOURCE()
+                    SET_BIT()
+                    HAL_GetTick() <__weak uint32_t HAL_GetTick (void) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal.c:346>:
+                    HAL_IS_BIT_CLR()
+                    READ_BIT()
+                    __HAL_RCC_BACKUPRESET_FORCE()
+                    __HAL_RCC_BACKUPRESET_RELEASE()
+                    HAL_IS_BIT_SET()
+                    __HAL_RCC_RTC_CONFIG()
+                    IS_RCC_RNGCLKSOURCE()
+                    __HAL_RCC_RNG_CONFIG()
+                    IS_RCC_SDMMC1CLKSOURCE()
+                    __HAL_RCC_SDMMC1_CONFIG()
+                    IS_RCC_SDMMC2CLKSOURCE()
+                    __HAL_RCC_SDMMC2_CONFIG()
+                    IS_RCC_SPI1CLKSOURCE()
+                    __HAL_RCC_SPI1_CONFIG()
+                    IS_RCC_SPI2CLKSOURCE()
+                    __HAL_RCC_SPI2_CONFIG()
+                    IS_RCC_SPI3CLKSOURCE()
+                    __HAL_RCC_SPI3_CONFIG()
+                    IS_RCC_SPI4CLKSOURCE()
+                    __HAL_RCC_SPI4_CONFIG()
+                    IS_RCC_SPI5CLKSOURCE()
+                    __HAL_RCC_SPI5_CONFIG()
+                    IS_RCC_SPI6CLKSOURCE()
+                    __HAL_RCC_SPI6_CONFIG()
+                    IS_RCC_OSPICLKSOURCE()
+                    __HAL_RCC_OSPI_CONFIG()
+                    IS_RCC_FDCANCLK()
+                    __HAL_RCC_FDCAN_CONFIG()
+                    IS_RCC_USBCLKSOURCE()
+                    __HAL_RCC_USB_CONFIG()
+                    IS_RCC_CECCLKSOURCE()
+                    __HAL_RCC_CEC_CONFIG()
+                Error_Handler() <void Error_Handler (void) at Core/Src/main.c:263>:
+                    __disable_irq()
+                __HAL_RCC_USART2_CLK_ENABLE()
+                __HAL_RCC_GPIOA_CLK_ENABLE()
+                HAL_GPIO_Init() <void HAL_GPIO_Init (GPIO_TypeDef *GPIOx, const GPIO_InitTypeDef *pGPIO_Init) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_gpio.c:178>:
+                    assert_param()
+                    IS_GPIO_ALL_INSTANCE()
+                    IS_GPIO_PIN()
+                    IS_GPIO_MODE()
+                    IS_GPIO_PULL()
+                    IS_GPIO_AF_INSTANCE()
+                    IS_GPIO_AF()
+                    IS_GPIO_SPEED()
+                    GPIO_GET_INDEX()
+                UNUSED()
+            __HAL_UART_DISABLE()
+            UART_AdvFeatureConfig() <void UART_AdvFeatureConfig (UART_HandleTypeDef *huart) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_uart.c:3346>:
+                assert_param()
+                IS_UART_ADVFEATURE_INIT()
+                HAL_IS_BIT_SET()
+                IS_UART_ADVFEATURE_SWAP()
+                MODIFY_REG()
+                IS_UART_ADVFEATURE_TXINV()
+                IS_UART_ADVFEATURE_RXINV()
+                IS_UART_ADVFEATURE_DATAINV()
+                IS_UART_OVERRUN()
+                IS_UART_ADVFEATURE_DMAONRXERROR()
+                IS_USART_AUTOBAUDRATE_DETECTION_INSTANCE()
+                IS_UART_ADVFEATURE_AUTOBAUDRATE()
+                IS_UART_ADVFEATURE_AUTOBAUDRATEMODE()
+                IS_UART_ADVFEATURE_MSBFIRST()
+            UART_SetConfig() <HAL_StatusTypeDef UART_SetConfig (UART_HandleTypeDef *huart) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_uart.c:3189>:
+                assert_param()
+                IS_UART_BAUDRATE()
+                IS_UART_WORD_LENGTH()
+                UART_INSTANCE_LOWPOWER()
+                IS_LPUART_STOPBITS()
+                IS_UART_STOPBITS()
+                IS_UART_ONE_BIT_SAMPLE()
+                IS_UART_PARITY()
+                IS_UART_MODE()
+                IS_UART_HARDWARE_FLOW_CONTROL()
+                IS_UART_OVERSAMPLING()
+                IS_UART_PRESCALER()
+                MODIFY_REG()
+                UART_GETCLOCKSOURCE()
+                HAL_RCCEx_GetPeriphCLKFreq() <uint32_t HAL_RCCEx_GetPeriphCLKFreq (uint64_t PeriphClk) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rcc_ex.c:3280>:
+                    assert_param()
+                    IS_RCC_PERIPHCLOCK()
+                    __HAL_RCC_GET_RTC_SOURCE()
+                    HAL_IS_BIT_SET()
+                    __HAL_RCC_GET_RTC_HSE_PRESCALER()
+                    __HAL_RCC_GET_SAI1_SOURCE()
+                    HAL_RCCEx_GetPLL1ClockFreq() <void HAL_RCCEx_GetPLL1ClockFreq (PLL1_ClocksTypeDef *pPLL1_Clocks) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rcc_ex.c:2833>:
+                        __HAL_RCC_GET_HSI_DIVIDER()
+                        HAL_IS_BIT_SET()
+                        __HAL_RCC_GET_PLL1_CLKOUT_CONFIG()
+                    HAL_RCCEx_GetPLL2ClockFreq() <void HAL_RCCEx_GetPLL2ClockFreq (PLL2_ClocksTypeDef *pPLL2_Clocks) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rcc_ex.c:2970>:
+                        __HAL_RCC_GET_HSI_DIVIDER()
+                        HAL_IS_BIT_SET()
+                        __HAL_RCC_GET_PLL2_CLKOUT_CONFIG()
+                    HAL_RCCEx_GetPLL3ClockFreq() <void HAL_RCCEx_GetPLL3ClockFreq (PLL3_ClocksTypeDef *pPLL3_Clocks) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rcc_ex.c:3104>:
+                        __HAL_RCC_GET_HSI_DIVIDER()
+                        HAL_IS_BIT_SET()
+                        __HAL_RCC_GET_PLL3_CLKOUT_CONFIG()
+                    __HAL_RCC_GET_CLKP_SOURCE()
+                    __HAL_RCC_GET_HSI_DIVIDER()
+                    __HAL_RCC_GET_SAI2_SOURCE()
+                    __HAL_RCC_GET_SDMMC1_SOURCE()
+                    __HAL_RCC_GET_SDMMC2_SOURCE()
+                    __HAL_RCC_GET_USART1_SOURCE()
+                    HAL_RCC_GetPCLK2Freq() <uint32_t HAL_RCC_GetPCLK2Freq (void) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rcc.c:1523>:
+                        HAL_RCC_GetHCLKFreq() <uint32_t HAL_RCC_GetHCLKFreq (void) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rcc.c:1496>:
+                            HAL_RCC_GetSysClockFreq() <uint32_t HAL_RCC_GetSysClockFreq (void) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rcc.c:1390>:
+                                __HAL_RCC_GET_SYSCLK_SOURCE()
+                                __HAL_RCC_GET_FLAG()
+                                __HAL_RCC_GET_HSI_DIVIDER()
+                    __HAL_RCC_GET_USART2_SOURCE()
+                    HAL_RCC_GetPCLK1Freq() <uint32_t HAL_RCC_GetPCLK1Freq (void) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rcc.c:1511>:
+                        HAL_RCC_GetHCLKFreq() <uint32_t HAL_RCC_GetHCLKFreq (void) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rcc.c:1496>:
+                            HAL_RCC_GetSysClockFreq() <uint32_t HAL_RCC_GetSysClockFreq (void) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rcc.c:1390>:
+                                __HAL_RCC_GET_SYSCLK_SOURCE()
+                                __HAL_RCC_GET_FLAG()
+                                __HAL_RCC_GET_HSI_DIVIDER()
+                    __HAL_RCC_GET_USART3_SOURCE()
+                    __HAL_RCC_GET_UART4_SOURCE()
+                    __HAL_RCC_GET_UART5_SOURCE()
+                    __HAL_RCC_GET_USART6_SOURCE()
+                    __HAL_RCC_GET_UART7_SOURCE()
+                    __HAL_RCC_GET_UART8_SOURCE()
+                    __HAL_RCC_GET_UART9_SOURCE()
+                    __HAL_RCC_GET_USART10_SOURCE()
+                    __HAL_RCC_GET_USART11_SOURCE()
+                    __HAL_RCC_GET_UART12_SOURCE()
+                    __HAL_RCC_GET_LPUART1_SOURCE()
+                    HAL_RCC_GetPCLK3Freq() <uint32_t HAL_RCC_GetPCLK3Freq (void) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rcc.c:1535>:
+                        HAL_RCC_GetHCLKFreq() <uint32_t HAL_RCC_GetHCLKFreq (void) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rcc.c:1496>:
+                            HAL_RCC_GetSysClockFreq() <uint32_t HAL_RCC_GetSysClockFreq (void) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rcc.c:1390>:
+                                __HAL_RCC_GET_SYSCLK_SOURCE()
+                                __HAL_RCC_GET_FLAG()
+                                __HAL_RCC_GET_HSI_DIVIDER()
+                    __HAL_RCC_GET_ADCDAC_SOURCE()
+                    HAL_RCC_GetHCLKFreq() <uint32_t HAL_RCC_GetHCLKFreq (void) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rcc.c:1496>:
+                        HAL_RCC_GetSysClockFreq() <uint32_t HAL_RCC_GetSysClockFreq (void) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rcc.c:1390>:
+                            __HAL_RCC_GET_SYSCLK_SOURCE()
+                            __HAL_RCC_GET_FLAG()
+                            __HAL_RCC_GET_HSI_DIVIDER()
+                    HAL_RCC_GetSysClockFreq() <uint32_t HAL_RCC_GetSysClockFreq (void) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rcc.c:1390>:
+                        __HAL_RCC_GET_SYSCLK_SOURCE()
+                        __HAL_RCC_GET_FLAG()
+                        __HAL_RCC_GET_HSI_DIVIDER()
+                    __HAL_RCC_GET_DAC_LP_SOURCE()
+                    __HAL_RCC_GET_I2C1_SOURCE()
+                    __HAL_RCC_GET_I2C2_SOURCE()
+                    __HAL_RCC_GET_I2C3_SOURCE()
+                    __HAL_RCC_GET_I2C4_SOURCE()
+                    __HAL_RCC_GET_I3C1_SOURCE()
+                    __HAL_RCC_GET_I3C2_SOURCE()
+                    __HAL_RCC_GET_LPTIM1_SOURCE()
+                    __HAL_RCC_GET_LPTIM2_SOURCE()
+                    __HAL_RCC_GET_LPTIM3_SOURCE()
+                    __HAL_RCC_GET_LPTIM4_SOURCE()
+                    __HAL_RCC_GET_LPTIM5_SOURCE()
+                    __HAL_RCC_GET_LPTIM6_SOURCE()
+                    __HAL_RCC_GET_FDCAN_SOURCE()
+                    __HAL_RCC_GET_SPI1_SOURCE()
+                    __HAL_RCC_GET_SPI2_SOURCE()
+                    __HAL_RCC_GET_SPI3_SOURCE()
+                    __HAL_RCC_GET_SPI4_SOURCE()
+                    __HAL_RCC_GET_SPI5_SOURCE()
+                    __HAL_RCC_GET_SPI6_SOURCE()
+                    __HAL_RCC_GET_OSPI_SOURCE()
+                    __HAL_RCC_GET_CEC_SOURCE()
+                    __HAL_RCC_GET_RNG_SOURCE()
+                    __HAL_RCC_GET_USB_SOURCE()
+                    __HAL_RCC_GET_ETH_SOURCE()
+                UART_DIV_LPUART()
+                UART_DIV_SAMPLING8()
+                UART_DIV_SAMPLING16()
+            CLEAR_BIT()
+            __HAL_UART_ENABLE()
+            UART_CheckIdleState() <HAL_StatusTypeDef UART_CheckIdleState (UART_HandleTypeDef *huart) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_uart.c:3422>:
+                HAL_GetTick() <__weak uint32_t HAL_GetTick (void) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal.c:346>:
+                UART_WaitOnFlagUntilTimeout() <HAL_StatusTypeDef UART_WaitOnFlagUntilTimeout (UART_HandleTypeDef *huart, uint32_t Flag, FlagStatus Status, uint32_t Tickstart, uint32_t Timeout) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_uart.c:3491>:
+                    __HAL_UART_GET_FLAG()
+                    HAL_GetTick() <__weak uint32_t HAL_GetTick (void) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal.c:346>:
+                    READ_BIT()
+                    __HAL_UART_CLEAR_FLAG()
+                    UART_EndRxTransfer() <void UART_EndRxTransfer (UART_HandleTypeDef *huart) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_uart.c:3745>:
+                        ATOMIC_CLEAR_BIT()
+                    __HAL_UNLOCK()
+                ATOMIC_CLEAR_BIT()
+                __HAL_UNLOCK()
+        Error_Handler() <void Error_Handler (void) at Core/Src/main.c:263>:
+            __disable_irq()
+        HAL_UARTEx_SetTxFifoThreshold() <HAL_StatusTypeDef HAL_UARTEx_SetTxFifoThreshold (UART_HandleTypeDef *huart, uint32_t Threshold) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_uart_ex.c:607>:
+            assert_param()
+            IS_UART_FIFO_INSTANCE()
+            IS_UART_TXFIFO_THRESHOLD()
+            __HAL_LOCK()
+            READ_REG()
+            __HAL_UART_DISABLE()
+            MODIFY_REG()
+            UARTEx_SetNbDataToProcess() <void UARTEx_SetNbDataToProcess (UART_HandleTypeDef *huart) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_uart_ex.c:1021>:
+                READ_BIT()
+            WRITE_REG()
+            __HAL_UNLOCK()
+        HAL_UARTEx_SetRxFifoThreshold() <HAL_StatusTypeDef HAL_UARTEx_SetRxFifoThreshold (UART_HandleTypeDef *huart, uint32_t Threshold) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_uart_ex.c:656>:
+            assert_param()
+            IS_UART_FIFO_INSTANCE()
+            IS_UART_RXFIFO_THRESHOLD()
+            __HAL_LOCK()
+            READ_REG()
+            __HAL_UART_DISABLE()
+            MODIFY_REG()
+            UARTEx_SetNbDataToProcess() <void UARTEx_SetNbDataToProcess (UART_HandleTypeDef *huart) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_uart_ex.c:1021>:
+                READ_BIT()
+            WRITE_REG()
+            __HAL_UNLOCK()
+        HAL_UARTEx_DisableFifoMode() <HAL_StatusTypeDef HAL_UARTEx_DisableFifoMode (UART_HandleTypeDef *huart) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_uart_ex.c:561>:
+            assert_param()
+            IS_UART_FIFO_INSTANCE()
+            __HAL_LOCK()
+            READ_REG()
+            __HAL_UART_DISABLE()
+            CLEAR_BIT()
+            WRITE_REG()
+            __HAL_UNLOCK()
+    HAL_ICACHE_Enable() <HAL_StatusTypeDef HAL_ICACHE_Enable (void) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_icache.c:230>:
+        SET_BIT()
+    coremark_main()
+    portable_init() <void portable_init (core_portable *p, int *argc, char *argv[]) at CoreMark/Src/core_portme.c:144>:
+        ee_printf() <int ee_printf (const char *fmt, ...) at CoreMark/Src/ee_printf.c:667>:
+            va_start()
+            ee_vsprintf() <int ee_vsprintf (char *buf, const char *fmt, va_list args) at CoreMark/Src/ee_printf.c:464>:
+                is_digit()
+                skip_atoi() <int skip_atoi (const char **s) at CoreMark/Src/ee_printf.c:47>:
+                    is_digit()
+                va_arg()
+                strnlen() <ee_size_t strnlen (const char *s, ee_size_t count) at CoreMark/Src/ee_printf.c:38>:
+                number() <char *number (char *str, long num, int base, int size, int precision, int type) at CoreMark/Src/ee_printf.c:56>:
+                eaddr() <char *eaddr (char *str, unsigned char *addr, int size, int precision, int type) at CoreMark/Src/ee_printf.c:146>:
+                iaddr() <char *iaddr (char *str, unsigned char *addr, int size, int precision, int type) at CoreMark/Src/ee_printf.c:175>:
+                flt() <char *flt (char *str, double num, int size, int precision, char fmt, int flags) at CoreMark/Src/ee_printf.c:396>:
+                    parse_float() <void parse_float (double value, char *buffer, char fmt, int precision) at CoreMark/Src/ee_printf.c:234>:
+                        ecvtbuf() <char *ecvtbuf (double arg, int ndigits, int *decpt, int *sign, char *buf) at CoreMark/Src/cvt.c:112>:
+                            cvt() <char *cvt (double arg, int ndigits, int *decpt, int *sign, char *buf, int eflag) at CoreMark/Src/cvt.c:21>:
+                                modf()
+                        ee_bufcpy() <void ee_bufcpy (char *pd, char *ps, int count) at CoreMark/Src/ee_printf.c:226>
+                        fcvtbuf() <char *fcvtbuf (double arg, int ndigits, int *decpt, int *sign, char *buf) at CoreMark/Src/cvt.c:124>:
+                            cvt() <char *cvt (double arg, int ndigits, int *decpt, int *sign, char *buf, int eflag) at CoreMark/Src/cvt.c:21>:
+                                modf()
+                    decimal_point() <void decimal_point (char *buffer) at CoreMark/Src/ee_printf.c:345>:
+                        strnlen() <ee_size_t strnlen (const char *s, ee_size_t count) at CoreMark/Src/ee_printf.c:38>:
+                    cropzeros() <void cropzeros (char *buffer) at CoreMark/Src/ee_printf.c:375>
+                    strnlen() <ee_size_t strnlen (const char *s, ee_size_t count) at CoreMark/Src/ee_printf.c:38>:
+            va_end()
+            send_char() <void send_char (char c) at Core/Src/print_config.c:5>:
+                HAL_UART_Transmit() <HAL_StatusTypeDef HAL_UART_Transmit (UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_uart.c:1119>:
+                    HAL_IS_BIT_SET()
+                    CLEAR_BIT()
+                    HAL_GetTick() <__weak uint32_t HAL_GetTick (void) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal.c:346>:
+                    UART_WaitOnFlagUntilTimeout() <HAL_StatusTypeDef UART_WaitOnFlagUntilTimeout (UART_HandleTypeDef *huart, uint32_t Flag, FlagStatus Status, uint32_t Tickstart, uint32_t Timeout) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_uart.c:3491>:
+                        __HAL_UART_GET_FLAG()
+                        HAL_GetTick() <__weak uint32_t HAL_GetTick (void) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal.c:346>:
+                        READ_BIT()
+                        __HAL_UART_CLEAR_FLAG()
+                        UART_EndRxTransfer() <void UART_EndRxTransfer (UART_HandleTypeDef *huart) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_uart.c:3745>:
+                            ATOMIC_CLEAR_BIT()
+                        __HAL_UNLOCK()
+    ee_printf() <int ee_printf (const char *fmt, ...) at CoreMark/Src/ee_printf.c:667>:
+        va_start()
+        ee_vsprintf() <int ee_vsprintf (char *buf, const char *fmt, va_list args) at CoreMark/Src/ee_printf.c:464>:
+            is_digit()
+            skip_atoi() <int skip_atoi (const char **s) at CoreMark/Src/ee_printf.c:47>:
+                is_digit()
+            va_arg()
+            strnlen() <ee_size_t strnlen (const char *s, ee_size_t count) at CoreMark/Src/ee_printf.c:38>:
+            number() <char *number (char *str, long num, int base, int size, int precision, int type) at CoreMark/Src/ee_printf.c:56>:
+            eaddr() <char *eaddr (char *str, unsigned char *addr, int size, int precision, int type) at CoreMark/Src/ee_printf.c:146>:
+            iaddr() <char *iaddr (char *str, unsigned char *addr, int size, int precision, int type) at CoreMark/Src/ee_printf.c:175>:
+            flt() <char *flt (char *str, double num, int size, int precision, char fmt, int flags) at CoreMark/Src/ee_printf.c:396>:
+                parse_float() <void parse_float (double value, char *buffer, char fmt, int precision) at CoreMark/Src/ee_printf.c:234>:
+                    ecvtbuf() <char *ecvtbuf (double arg, int ndigits, int *decpt, int *sign, char *buf) at CoreMark/Src/cvt.c:112>:
+                        cvt() <char *cvt (double arg, int ndigits, int *decpt, int *sign, char *buf, int eflag) at CoreMark/Src/cvt.c:21>:
+                            modf()
+                    ee_bufcpy() <void ee_bufcpy (char *pd, char *ps, int count) at CoreMark/Src/ee_printf.c:226>
+                    fcvtbuf() <char *fcvtbuf (double arg, int ndigits, int *decpt, int *sign, char *buf) at CoreMark/Src/cvt.c:124>:
+                        cvt() <char *cvt (double arg, int ndigits, int *decpt, int *sign, char *buf, int eflag) at CoreMark/Src/cvt.c:21>:
+                            modf()
+                decimal_point() <void decimal_point (char *buffer) at CoreMark/Src/ee_printf.c:345>:
+                    strnlen() <ee_size_t strnlen (const char *s, ee_size_t count) at CoreMark/Src/ee_printf.c:38>:
+                cropzeros() <void cropzeros (char *buffer) at CoreMark/Src/ee_printf.c:375>
+                strnlen() <ee_size_t strnlen (const char *s, ee_size_t count) at CoreMark/Src/ee_printf.c:38>:
+        va_end()
+        send_char() <void send_char (char c) at Core/Src/print_config.c:5>:
+            HAL_UART_Transmit() <HAL_StatusTypeDef HAL_UART_Transmit (UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_uart.c:1119>:
+                HAL_IS_BIT_SET()
+                CLEAR_BIT()
+                HAL_GetTick() <__weak uint32_t HAL_GetTick (void) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal.c:346>:
+                UART_WaitOnFlagUntilTimeout() <HAL_StatusTypeDef UART_WaitOnFlagUntilTimeout (UART_HandleTypeDef *huart, uint32_t Flag, FlagStatus Status, uint32_t Tickstart, uint32_t Timeout) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_uart.c:3491>:
+                    __HAL_UART_GET_FLAG()
+                    HAL_GetTick() <__weak uint32_t HAL_GetTick (void) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal.c:346>:
+                    READ_BIT()
+                    __HAL_UART_CLEAR_FLAG()
+                    UART_EndRxTransfer() <void UART_EndRxTransfer (UART_HandleTypeDef *huart) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_uart.c:3745>:
+                        ATOMIC_CLEAR_BIT()
+                    __HAL_UNLOCK()
+    get_seed()
+    get_seed_32() <ee_s32 get_seed_32 (int i) at CoreMark/Src/core_util.c:132>:
+        portme_sys1()
+        portme_sys2()
+        portme_sys3()
+        portme_sys4()
+        portme_sys5()
+    portable_malloc()
+    core_list_init() <list_head *core_list_init (ee_u32 blksize, list_head *memblock, ee_s16 seed) at CoreMark/Src/core_list_join.c:251>:
+        core_list_insert_new() <list_head *core_list_insert_new (list_head *insert_point, list_data *info, list_head **memblock, list_data **datablock, list_head *memblock_end, list_data *datablock_end) at CoreMark/Src/core_list_join.c:336>:
+            copy_info() <void copy_info (list_data *to, list_data *from) at CoreMark/Src/core_list_join.c:145>
+        core_list_mergesort() <list_head *core_list_mergesort (list_head *list, list_cmp cmp, core_results *res) at CoreMark/Src/core_list_join.c:500>:
+        cmp_idx() <ee_s32 cmp_idx (list_data *a, list_data *b, core_results *res) at CoreMark/Src/core_list_join.c:134>:
+        ee_printf() <int ee_printf (const char *fmt, ...) at CoreMark/Src/ee_printf.c:667>:
+            va_start()
+            ee_vsprintf() <int ee_vsprintf (char *buf, const char *fmt, va_list args) at CoreMark/Src/ee_printf.c:464>:
+                is_digit()
+                skip_atoi() <int skip_atoi (const char **s) at CoreMark/Src/ee_printf.c:47>:
+                    is_digit()
+                va_arg()
+                strnlen() <ee_size_t strnlen (const char *s, ee_size_t count) at CoreMark/Src/ee_printf.c:38>:
+                number() <char *number (char *str, long num, int base, int size, int precision, int type) at CoreMark/Src/ee_printf.c:56>:
+                eaddr() <char *eaddr (char *str, unsigned char *addr, int size, int precision, int type) at CoreMark/Src/ee_printf.c:146>:
+                iaddr() <char *iaddr (char *str, unsigned char *addr, int size, int precision, int type) at CoreMark/Src/ee_printf.c:175>:
+                flt() <char *flt (char *str, double num, int size, int precision, char fmt, int flags) at CoreMark/Src/ee_printf.c:396>:
+                    parse_float() <void parse_float (double value, char *buffer, char fmt, int precision) at CoreMark/Src/ee_printf.c:234>:
+                        ecvtbuf() <char *ecvtbuf (double arg, int ndigits, int *decpt, int *sign, char *buf) at CoreMark/Src/cvt.c:112>:
+                            cvt() <char *cvt (double arg, int ndigits, int *decpt, int *sign, char *buf, int eflag) at CoreMark/Src/cvt.c:21>:
+                                modf()
+                        ee_bufcpy() <void ee_bufcpy (char *pd, char *ps, int count) at CoreMark/Src/ee_printf.c:226>
+                        fcvtbuf() <char *fcvtbuf (double arg, int ndigits, int *decpt, int *sign, char *buf) at CoreMark/Src/cvt.c:124>:
+                            cvt() <char *cvt (double arg, int ndigits, int *decpt, int *sign, char *buf, int eflag) at CoreMark/Src/cvt.c:21>:
+                                modf()
+                    decimal_point() <void decimal_point (char *buffer) at CoreMark/Src/ee_printf.c:345>:
+                        strnlen() <ee_size_t strnlen (const char *s, ee_size_t count) at CoreMark/Src/ee_printf.c:38>:
+                    cropzeros() <void cropzeros (char *buffer) at CoreMark/Src/ee_printf.c:375>
+                    strnlen() <ee_size_t strnlen (const char *s, ee_size_t count) at CoreMark/Src/ee_printf.c:38>:
+            va_end()
+            send_char() <void send_char (char c) at Core/Src/print_config.c:5>:
+                HAL_UART_Transmit() <HAL_StatusTypeDef HAL_UART_Transmit (UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_uart.c:1119>:
+                    HAL_IS_BIT_SET()
+                    CLEAR_BIT()
+                    HAL_GetTick() <__weak uint32_t HAL_GetTick (void) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal.c:346>:
+                    UART_WaitOnFlagUntilTimeout() <HAL_StatusTypeDef UART_WaitOnFlagUntilTimeout (UART_HandleTypeDef *huart, uint32_t Flag, FlagStatus Status, uint32_t Tickstart, uint32_t Timeout) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_uart.c:3491>:
+                        __HAL_UART_GET_FLAG()
+                        HAL_GetTick() <__weak uint32_t HAL_GetTick (void) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal.c:346>:
+                        READ_BIT()
+                        __HAL_UART_CLEAR_FLAG()
+                        UART_EndRxTransfer() <void UART_EndRxTransfer (UART_HandleTypeDef *huart) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_uart.c:3745>:
+                            ATOMIC_CLEAR_BIT()
+                        __HAL_UNLOCK()
+    core_init_matrix() <ee_u32 core_init_matrix (ee_u32 blksize, void *memblk, ee_s32 seed, mat_params *p) at CoreMark/Src/core_matrix.c:181>:
+        align_mem()
+        matrix_clip()
+        printmat() <void printmat (MATDAT *A, ee_u32 N, char *name) at CoreMark/Src/core_matrix.c:53>:
+            ee_printf() <int ee_printf (const char *fmt, ...) at CoreMark/Src/ee_printf.c:667>:
+                va_start()
+                ee_vsprintf() <int ee_vsprintf (char *buf, const char *fmt, va_list args) at CoreMark/Src/ee_printf.c:464>:
+                    is_digit()
+                    skip_atoi() <int skip_atoi (const char **s) at CoreMark/Src/ee_printf.c:47>:
+                        is_digit()
+                    va_arg()
+                    strnlen() <ee_size_t strnlen (const char *s, ee_size_t count) at CoreMark/Src/ee_printf.c:38>:
+                    number() <char *number (char *str, long num, int base, int size, int precision, int type) at CoreMark/Src/ee_printf.c:56>:
+                    eaddr() <char *eaddr (char *str, unsigned char *addr, int size, int precision, int type) at CoreMark/Src/ee_printf.c:146>:
+                    iaddr() <char *iaddr (char *str, unsigned char *addr, int size, int precision, int type) at CoreMark/Src/ee_printf.c:175>:
+                    flt() <char *flt (char *str, double num, int size, int precision, char fmt, int flags) at CoreMark/Src/ee_printf.c:396>:
+                        parse_float() <void parse_float (double value, char *buffer, char fmt, int precision) at CoreMark/Src/ee_printf.c:234>:
+                            ecvtbuf() <char *ecvtbuf (double arg, int ndigits, int *decpt, int *sign, char *buf) at CoreMark/Src/cvt.c:112>:
+                                cvt() <char *cvt (double arg, int ndigits, int *decpt, int *sign, char *buf, int eflag) at CoreMark/Src/cvt.c:21>:
+                                    modf()
+                            ee_bufcpy() <void ee_bufcpy (char *pd, char *ps, int count) at CoreMark/Src/ee_printf.c:226>
+                            fcvtbuf() <char *fcvtbuf (double arg, int ndigits, int *decpt, int *sign, char *buf) at CoreMark/Src/cvt.c:124>:
+                                cvt() <char *cvt (double arg, int ndigits, int *decpt, int *sign, char *buf, int eflag) at CoreMark/Src/cvt.c:21>:
+                                    modf()
+                        decimal_point() <void decimal_point (char *buffer) at CoreMark/Src/ee_printf.c:345>:
+                            strnlen() <ee_size_t strnlen (const char *s, ee_size_t count) at CoreMark/Src/ee_printf.c:38>:
+                        cropzeros() <void cropzeros (char *buffer) at CoreMark/Src/ee_printf.c:375>
+                        strnlen() <ee_size_t strnlen (const char *s, ee_size_t count) at CoreMark/Src/ee_printf.c:38>:
+                va_end()
+                send_char() <void send_char (char c) at Core/Src/print_config.c:5>:
+                    HAL_UART_Transmit() <HAL_StatusTypeDef HAL_UART_Transmit (UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_uart.c:1119>:
+                        HAL_IS_BIT_SET()
+                        CLEAR_BIT()
+                        HAL_GetTick() <__weak uint32_t HAL_GetTick (void) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal.c:346>:
+                        UART_WaitOnFlagUntilTimeout() <HAL_StatusTypeDef UART_WaitOnFlagUntilTimeout (UART_HandleTypeDef *huart, uint32_t Flag, FlagStatus Status, uint32_t Tickstart, uint32_t Timeout) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_uart.c:3491>:
+                            __HAL_UART_GET_FLAG()
+                            HAL_GetTick() <__weak uint32_t HAL_GetTick (void) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal.c:346>:
+                            READ_BIT()
+                            __HAL_UART_CLEAR_FLAG()
+                            UART_EndRxTransfer() <void UART_EndRxTransfer (UART_HandleTypeDef *huart) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_uart.c:3745>:
+                                ATOMIC_CLEAR_BIT()
+                            __HAL_UNLOCK()
+    core_init_state() <void core_init_state (ee_u32 size, ee_s16 seed, ee_u8 *p) at CoreMark/Src/core_state.c:140>:
+        ee_printf() <int ee_printf (const char *fmt, ...) at CoreMark/Src/ee_printf.c:667>:
+            va_start()
+            ee_vsprintf() <int ee_vsprintf (char *buf, const char *fmt, va_list args) at CoreMark/Src/ee_printf.c:464>:
+                is_digit()
+                skip_atoi() <int skip_atoi (const char **s) at CoreMark/Src/ee_printf.c:47>:
+                    is_digit()
+                va_arg()
+                strnlen() <ee_size_t strnlen (const char *s, ee_size_t count) at CoreMark/Src/ee_printf.c:38>:
+                number() <char *number (char *str, long num, int base, int size, int precision, int type) at CoreMark/Src/ee_printf.c:56>:
+                eaddr() <char *eaddr (char *str, unsigned char *addr, int size, int precision, int type) at CoreMark/Src/ee_printf.c:146>:
+                iaddr() <char *iaddr (char *str, unsigned char *addr, int size, int precision, int type) at CoreMark/Src/ee_printf.c:175>:
+                flt() <char *flt (char *str, double num, int size, int precision, char fmt, int flags) at CoreMark/Src/ee_printf.c:396>:
+                    parse_float() <void parse_float (double value, char *buffer, char fmt, int precision) at CoreMark/Src/ee_printf.c:234>:
+                        ecvtbuf() <char *ecvtbuf (double arg, int ndigits, int *decpt, int *sign, char *buf) at CoreMark/Src/cvt.c:112>:
+                            cvt() <char *cvt (double arg, int ndigits, int *decpt, int *sign, char *buf, int eflag) at CoreMark/Src/cvt.c:21>:
+                                modf()
+                        ee_bufcpy() <void ee_bufcpy (char *pd, char *ps, int count) at CoreMark/Src/ee_printf.c:226>
+                        fcvtbuf() <char *fcvtbuf (double arg, int ndigits, int *decpt, int *sign, char *buf) at CoreMark/Src/cvt.c:124>:
+                            cvt() <char *cvt (double arg, int ndigits, int *decpt, int *sign, char *buf, int eflag) at CoreMark/Src/cvt.c:21>:
+                                modf()
+                    decimal_point() <void decimal_point (char *buffer) at CoreMark/Src/ee_printf.c:345>:
+                        strnlen() <ee_size_t strnlen (const char *s, ee_size_t count) at CoreMark/Src/ee_printf.c:38>:
+                    cropzeros() <void cropzeros (char *buffer) at CoreMark/Src/ee_printf.c:375>
+                    strnlen() <ee_size_t strnlen (const char *s, ee_size_t count) at CoreMark/Src/ee_printf.c:38>:
+            va_end()
+            send_char() <void send_char (char c) at Core/Src/print_config.c:5>:
+                HAL_UART_Transmit() <HAL_StatusTypeDef HAL_UART_Transmit (UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_uart.c:1119>:
+                    HAL_IS_BIT_SET()
+                    CLEAR_BIT()
+                    HAL_GetTick() <__weak uint32_t HAL_GetTick (void) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal.c:346>:
+                    UART_WaitOnFlagUntilTimeout() <HAL_StatusTypeDef UART_WaitOnFlagUntilTimeout (UART_HandleTypeDef *huart, uint32_t Flag, FlagStatus Status, uint32_t Tickstart, uint32_t Timeout) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_uart.c:3491>:
+                        __HAL_UART_GET_FLAG()
+                        HAL_GetTick() <__weak uint32_t HAL_GetTick (void) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal.c:346>:
+                        READ_BIT()
+                        __HAL_UART_CLEAR_FLAG()
+                        UART_EndRxTransfer() <void UART_EndRxTransfer (UART_HandleTypeDef *huart) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_uart.c:3745>:
+                            ATOMIC_CLEAR_BIT()
+                        __HAL_UNLOCK()
+    start_time() <void start_time (void) at CoreMark/Src/core_portme.c:80>:
+    iterate() <void *iterate (void *pres) at CoreMark/Src/core_main.c:53>:
+        core_bench_list() <ee_u16 core_bench_list (core_results *res, ee_s16 finder_idx) at CoreMark/Src/core_list_join.c:159>:
+            core_list_find() <list_head *core_list_find (list_head *list, list_data *info) at CoreMark/Src/core_list_join.c:435>
+            core_list_reverse() <list_head *core_list_reverse (list_head *list) at CoreMark/Src/core_list_join.c:465>:
+            ee_printf() <int ee_printf (const char *fmt, ...) at CoreMark/Src/ee_printf.c:667>:
+                va_start()
+                ee_vsprintf() <int ee_vsprintf (char *buf, const char *fmt, va_list args) at CoreMark/Src/ee_printf.c:464>:
+                    is_digit()
+                    skip_atoi() <int skip_atoi (const char **s) at CoreMark/Src/ee_printf.c:47>:
+                        is_digit()
+                    va_arg()
+                    strnlen() <ee_size_t strnlen (const char *s, ee_size_t count) at CoreMark/Src/ee_printf.c:38>:
+                    number() <char *number (char *str, long num, int base, int size, int precision, int type) at CoreMark/Src/ee_printf.c:56>:
+                    eaddr() <char *eaddr (char *str, unsigned char *addr, int size, int precision, int type) at CoreMark/Src/ee_printf.c:146>:
+                    iaddr() <char *iaddr (char *str, unsigned char *addr, int size, int precision, int type) at CoreMark/Src/ee_printf.c:175>:
+                    flt() <char *flt (char *str, double num, int size, int precision, char fmt, int flags) at CoreMark/Src/ee_printf.c:396>:
+                        parse_float() <void parse_float (double value, char *buffer, char fmt, int precision) at CoreMark/Src/ee_printf.c:234>:
+                            ecvtbuf() <char *ecvtbuf (double arg, int ndigits, int *decpt, int *sign, char *buf) at CoreMark/Src/cvt.c:112>:
+                                cvt() <char *cvt (double arg, int ndigits, int *decpt, int *sign, char *buf, int eflag) at CoreMark/Src/cvt.c:21>:
+                                    modf()
+                            ee_bufcpy() <void ee_bufcpy (char *pd, char *ps, int count) at CoreMark/Src/ee_printf.c:226>
+                            fcvtbuf() <char *fcvtbuf (double arg, int ndigits, int *decpt, int *sign, char *buf) at CoreMark/Src/cvt.c:124>:
+                                cvt() <char *cvt (double arg, int ndigits, int *decpt, int *sign, char *buf, int eflag) at CoreMark/Src/cvt.c:21>:
+                                    modf()
+                        decimal_point() <void decimal_point (char *buffer) at CoreMark/Src/ee_printf.c:345>:
+                            strnlen() <ee_size_t strnlen (const char *s, ee_size_t count) at CoreMark/Src/ee_printf.c:38>:
+                        cropzeros() <void cropzeros (char *buffer) at CoreMark/Src/ee_printf.c:375>
+                        strnlen() <ee_size_t strnlen (const char *s, ee_size_t count) at CoreMark/Src/ee_printf.c:38>:
+                va_end()
+                send_char() <void send_char (char c) at Core/Src/print_config.c:5>:
+                    HAL_UART_Transmit() <HAL_StatusTypeDef HAL_UART_Transmit (UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_uart.c:1119>:
+                        HAL_IS_BIT_SET()
+                        CLEAR_BIT()
+                        HAL_GetTick() <__weak uint32_t HAL_GetTick (void) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal.c:346>:
+                        UART_WaitOnFlagUntilTimeout() <HAL_StatusTypeDef UART_WaitOnFlagUntilTimeout (UART_HandleTypeDef *huart, uint32_t Flag, FlagStatus Status, uint32_t Tickstart, uint32_t Timeout) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_uart.c:3491>:
+                            __HAL_UART_GET_FLAG()
+                            HAL_GetTick() <__weak uint32_t HAL_GetTick (void) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal.c:346>:
+                            READ_BIT()
+                            __HAL_UART_CLEAR_FLAG()
+                            UART_EndRxTransfer() <void UART_EndRxTransfer (UART_HandleTypeDef *huart) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_uart.c:3745>:
+                                ATOMIC_CLEAR_BIT()
+                            __HAL_UNLOCK()
+            core_list_mergesort() <list_head *core_list_mergesort (list_head *list, list_cmp cmp, core_results *res) at CoreMark/Src/core_list_join.c:500>:
+            cmp_complex() <ee_s32 cmp_complex (list_data *a, list_data *b, core_results *res) at CoreMark/Src/core_list_join.c:121>:
+                calc_func() <ee_s16 calc_func (ee_s16 *pdata, core_results *res) at CoreMark/Src/core_list_join.c:70>:
+                    core_bench_state() <ee_u16 core_bench_state (ee_u32 blksize, ee_u8 *memblock, ee_s16 seed1, ee_s16 seed2, ee_s16 step, ee_u16 crc) at CoreMark/Src/core_state.c:46>:
+                        ee_printf() <int ee_printf (const char *fmt, ...) at CoreMark/Src/ee_printf.c:667>:
+                            va_start()
+                            ee_vsprintf() <int ee_vsprintf (char *buf, const char *fmt, va_list args) at CoreMark/Src/ee_printf.c:464>:
+                                is_digit()
+                                skip_atoi() <int skip_atoi (const char **s) at CoreMark/Src/ee_printf.c:47>:
+                                    is_digit()
+                                va_arg()
+                                strnlen() <ee_size_t strnlen (const char *s, ee_size_t count) at CoreMark/Src/ee_printf.c:38>:
+                                number() <char *number (char *str, long num, int base, int size, int precision, int type) at CoreMark/Src/ee_printf.c:56>:
+                                eaddr() <char *eaddr (char *str, unsigned char *addr, int size, int precision, int type) at CoreMark/Src/ee_printf.c:146>:
+                                iaddr() <char *iaddr (char *str, unsigned char *addr, int size, int precision, int type) at CoreMark/Src/ee_printf.c:175>:
+                                flt() <char *flt (char *str, double num, int size, int precision, char fmt, int flags) at CoreMark/Src/ee_printf.c:396>:
+                                    parse_float() <void parse_float (double value, char *buffer, char fmt, int precision) at CoreMark/Src/ee_printf.c:234>:
+                                        ecvtbuf() <char *ecvtbuf (double arg, int ndigits, int *decpt, int *sign, char *buf) at CoreMark/Src/cvt.c:112>:
+                                            cvt() <char *cvt (double arg, int ndigits, int *decpt, int *sign, char *buf, int eflag) at CoreMark/Src/cvt.c:21>:
+                                                modf()
+                                        ee_bufcpy() <void ee_bufcpy (char *pd, char *ps, int count) at CoreMark/Src/ee_printf.c:226>
+                                        fcvtbuf() <char *fcvtbuf (double arg, int ndigits, int *decpt, int *sign, char *buf) at CoreMark/Src/cvt.c:124>:
+                                            cvt() <char *cvt (double arg, int ndigits, int *decpt, int *sign, char *buf, int eflag) at CoreMark/Src/cvt.c:21>:
+                                                modf()
+                                    decimal_point() <void decimal_point (char *buffer) at CoreMark/Src/ee_printf.c:345>:
+                                        strnlen() <ee_size_t strnlen (const char *s, ee_size_t count) at CoreMark/Src/ee_printf.c:38>:
+                                    cropzeros() <void cropzeros (char *buffer) at CoreMark/Src/ee_printf.c:375>
+                                    strnlen() <ee_size_t strnlen (const char *s, ee_size_t count) at CoreMark/Src/ee_printf.c:38>:
+                            va_end()
+                            send_char() <void send_char (char c) at Core/Src/print_config.c:5>:
+                                HAL_UART_Transmit() <HAL_StatusTypeDef HAL_UART_Transmit (UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_uart.c:1119>:
+                                    HAL_IS_BIT_SET()
+                                    CLEAR_BIT()
+                                    HAL_GetTick() <__weak uint32_t HAL_GetTick (void) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal.c:346>:
+                                    UART_WaitOnFlagUntilTimeout() <HAL_StatusTypeDef UART_WaitOnFlagUntilTimeout (UART_HandleTypeDef *huart, uint32_t Flag, FlagStatus Status, uint32_t Tickstart, uint32_t Timeout) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_uart.c:3491>:
+                                        __HAL_UART_GET_FLAG()
+                                        HAL_GetTick() <__weak uint32_t HAL_GetTick (void) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal.c:346>:
+                                        READ_BIT()
+                                        __HAL_UART_CLEAR_FLAG()
+                                        UART_EndRxTransfer() <void UART_EndRxTransfer (UART_HandleTypeDef *huart) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_uart.c:3745>:
+                                            ATOMIC_CLEAR_BIT()
+                                        __HAL_UNLOCK()
+                        core_state_transition() <enum CORE_STATE core_state_transition (ee_u8 **instr, ee_u32 *transition_count) at CoreMark/Src/core_state.c:217>:
+                            ee_isdigit() <ee_u8 ee_isdigit (ee_u8 c) at CoreMark/Src/core_state.c:198>:
+                    core_bench_matrix() <ee_u16 core_bench_matrix (mat_params *p, ee_s16 seed, ee_u16 crc) at CoreMark/Src/core_matrix.c:92>:
+                        crc16() <ee_u16 crc16 (ee_s16 newval, ee_u16 crc) at CoreMark/Src/core_util.c:204>:
+                            crcu16() <ee_u16 crcu16 (ee_u16 newval, ee_u16 crc) at CoreMark/Src/core_util.c:190>:
+                                crcu8() <ee_u16 crcu8 (ee_u8 data, ee_u16 crc) at CoreMark/Src/core_util.c:165>:
+                        matrix_test() <ee_s16 matrix_test (ee_u32 N, MATRES *C, MATDAT *A, MATDAT *B, MATDAT val) at CoreMark/Src/core_matrix.c:130>:
+                            matrix_big()
+                            matrix_add_const() <void matrix_add_const (ee_u32 N, MATDAT *A, MATDAT val) at CoreMark/Src/core_matrix.c:285>:
+                            printmat() <void printmat (MATDAT *A, ee_u32 N, char *name) at CoreMark/Src/core_matrix.c:53>:
+                                ee_printf() <int ee_printf (const char *fmt, ...) at CoreMark/Src/ee_printf.c:667>:
+                                    va_start()
+                                    ee_vsprintf() <int ee_vsprintf (char *buf, const char *fmt, va_list args) at CoreMark/Src/ee_printf.c:464>:
+                                        is_digit()
+                                        skip_atoi() <int skip_atoi (const char **s) at CoreMark/Src/ee_printf.c:47>:
+                                            is_digit()
+                                        va_arg()
+                                        strnlen() <ee_size_t strnlen (const char *s, ee_size_t count) at CoreMark/Src/ee_printf.c:38>:
+                                        number() <char *number (char *str, long num, int base, int size, int precision, int type) at CoreMark/Src/ee_printf.c:56>:
+                                        eaddr() <char *eaddr (char *str, unsigned char *addr, int size, int precision, int type) at CoreMark/Src/ee_printf.c:146>:
+                                        iaddr() <char *iaddr (char *str, unsigned char *addr, int size, int precision, int type) at CoreMark/Src/ee_printf.c:175>:
+                                        flt() <char *flt (char *str, double num, int size, int precision, char fmt, int flags) at CoreMark/Src/ee_printf.c:396>:
+                                            parse_float() <void parse_float (double value, char *buffer, char fmt, int precision) at CoreMark/Src/ee_printf.c:234>:
+                                                ecvtbuf() <char *ecvtbuf (double arg, int ndigits, int *decpt, int *sign, char *buf) at CoreMark/Src/cvt.c:112>:
+                                                    cvt() <char *cvt (double arg, int ndigits, int *decpt, int *sign, char *buf, int eflag) at CoreMark/Src/cvt.c:21>:
+                                                        modf()
+                                                ee_bufcpy() <void ee_bufcpy (char *pd, char *ps, int count) at CoreMark/Src/ee_printf.c:226>
+                                                fcvtbuf() <char *fcvtbuf (double arg, int ndigits, int *decpt, int *sign, char *buf) at CoreMark/Src/cvt.c:124>:
+                                                    cvt() <char *cvt (double arg, int ndigits, int *decpt, int *sign, char *buf, int eflag) at CoreMark/Src/cvt.c:21>:
+                                                        modf()
+                                            decimal_point() <void decimal_point (char *buffer) at CoreMark/Src/ee_printf.c:345>:
+                                                strnlen() <ee_size_t strnlen (const char *s, ee_size_t count) at CoreMark/Src/ee_printf.c:38>:
+                                            cropzeros() <void cropzeros (char *buffer) at CoreMark/Src/ee_printf.c:375>
+                                            strnlen() <ee_size_t strnlen (const char *s, ee_size_t count) at CoreMark/Src/ee_printf.c:38>:
+                                    va_end()
+                                    send_char() <void send_char (char c) at Core/Src/print_config.c:5>:
+                                        HAL_UART_Transmit() <HAL_StatusTypeDef HAL_UART_Transmit (UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_uart.c:1119>:
+                                            HAL_IS_BIT_SET()
+                                            CLEAR_BIT()
+                                            HAL_GetTick() <__weak uint32_t HAL_GetTick (void) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal.c:346>:
+                                            UART_WaitOnFlagUntilTimeout() <HAL_StatusTypeDef UART_WaitOnFlagUntilTimeout (UART_HandleTypeDef *huart, uint32_t Flag, FlagStatus Status, uint32_t Tickstart, uint32_t Timeout) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_uart.c:3491>:
+                                                __HAL_UART_GET_FLAG()
+                                                HAL_GetTick() <__weak uint32_t HAL_GetTick (void) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal.c:346>:
+                                                READ_BIT()
+                                                __HAL_UART_CLEAR_FLAG()
+                                                UART_EndRxTransfer() <void UART_EndRxTransfer (UART_HandleTypeDef *huart) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_uart.c:3745>:
+                                                    ATOMIC_CLEAR_BIT()
+                                                __HAL_UNLOCK()
+                            matrix_mul_const() <void matrix_mul_const (ee_u32 N, MATRES *C, MATDAT *A, MATDAT val) at CoreMark/Src/core_matrix.c:269>:
+                            crc16() <ee_u16 crc16 (ee_s16 newval, ee_u16 crc) at CoreMark/Src/core_util.c:204>:
+                                crcu16() <ee_u16 crcu16 (ee_u16 newval, ee_u16 crc) at CoreMark/Src/core_util.c:190>:
+                                    crcu8() <ee_u16 crcu8 (ee_u8 data, ee_u16 crc) at CoreMark/Src/core_util.c:165>:
+                            matrix_sum() <ee_s16 matrix_sum (ee_u32 N, MATRES *C, MATDAT clipval) at CoreMark/Src/core_matrix.c:238>:
+                            printmatC() <void printmatC (MATRES *C, ee_u32 N, char *name) at CoreMark/Src/core_matrix.c:69>:
+                                ee_printf() <int ee_printf (const char *fmt, ...) at CoreMark/Src/ee_printf.c:667>:
+                                    va_start()
+                                    ee_vsprintf() <int ee_vsprintf (char *buf, const char *fmt, va_list args) at CoreMark/Src/ee_printf.c:464>:
+                                        is_digit()
+                                        skip_atoi() <int skip_atoi (const char **s) at CoreMark/Src/ee_printf.c:47>:
+                                            is_digit()
+                                        va_arg()
+                                        strnlen() <ee_size_t strnlen (const char *s, ee_size_t count) at CoreMark/Src/ee_printf.c:38>:
+                                        number() <char *number (char *str, long num, int base, int size, int precision, int type) at CoreMark/Src/ee_printf.c:56>:
+                                        eaddr() <char *eaddr (char *str, unsigned char *addr, int size, int precision, int type) at CoreMark/Src/ee_printf.c:146>:
+                                        iaddr() <char *iaddr (char *str, unsigned char *addr, int size, int precision, int type) at CoreMark/Src/ee_printf.c:175>:
+                                        flt() <char *flt (char *str, double num, int size, int precision, char fmt, int flags) at CoreMark/Src/ee_printf.c:396>:
+                                            parse_float() <void parse_float (double value, char *buffer, char fmt, int precision) at CoreMark/Src/ee_printf.c:234>:
+                                                ecvtbuf() <char *ecvtbuf (double arg, int ndigits, int *decpt, int *sign, char *buf) at CoreMark/Src/cvt.c:112>:
+                                                    cvt() <char *cvt (double arg, int ndigits, int *decpt, int *sign, char *buf, int eflag) at CoreMark/Src/cvt.c:21>:
+                                                        modf()
+                                                ee_bufcpy() <void ee_bufcpy (char *pd, char *ps, int count) at CoreMark/Src/ee_printf.c:226>
+                                                fcvtbuf() <char *fcvtbuf (double arg, int ndigits, int *decpt, int *sign, char *buf) at CoreMark/Src/cvt.c:124>:
+                                                    cvt() <char *cvt (double arg, int ndigits, int *decpt, int *sign, char *buf, int eflag) at CoreMark/Src/cvt.c:21>:
+                                                        modf()
+                                            decimal_point() <void decimal_point (char *buffer) at CoreMark/Src/ee_printf.c:345>:
+                                                strnlen() <ee_size_t strnlen (const char *s, ee_size_t count) at CoreMark/Src/ee_printf.c:38>:
+                                            cropzeros() <void cropzeros (char *buffer) at CoreMark/Src/ee_printf.c:375>
+                                            strnlen() <ee_size_t strnlen (const char *s, ee_size_t count) at CoreMark/Src/ee_printf.c:38>:
+                                    va_end()
+                                    send_char() <void send_char (char c) at Core/Src/print_config.c:5>:
+                                        HAL_UART_Transmit() <HAL_StatusTypeDef HAL_UART_Transmit (UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_uart.c:1119>:
+                                            HAL_IS_BIT_SET()
+                                            CLEAR_BIT()
+                                            HAL_GetTick() <__weak uint32_t HAL_GetTick (void) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal.c:346>:
+                                            UART_WaitOnFlagUntilTimeout() <HAL_StatusTypeDef UART_WaitOnFlagUntilTimeout (UART_HandleTypeDef *huart, uint32_t Flag, FlagStatus Status, uint32_t Tickstart, uint32_t Timeout) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_uart.c:3491>:
+                                                __HAL_UART_GET_FLAG()
+                                                HAL_GetTick() <__weak uint32_t HAL_GetTick (void) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal.c:346>:
+                                                READ_BIT()
+                                                __HAL_UART_CLEAR_FLAG()
+                                                UART_EndRxTransfer() <void UART_EndRxTransfer (UART_HandleTypeDef *huart) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_uart.c:3745>:
+                                                    ATOMIC_CLEAR_BIT()
+                                                __HAL_UNLOCK()
+                            matrix_mul_vect() <void matrix_mul_vect (ee_u32 N, MATRES *C, MATDAT *A, MATDAT *B) at CoreMark/Src/core_matrix.c:303>:
+                            matrix_mul_matrix() <void matrix_mul_matrix (ee_u32 N, MATRES *C, MATDAT *A, MATDAT *B) at CoreMark/Src/core_matrix.c:322>:
+                            matrix_mul_matrix_bitextract() <void matrix_mul_matrix_bitextract (ee_u32 N, MATRES *C, MATDAT *A, MATDAT *B) at CoreMark/Src/core_matrix.c:344>:
+                                bit_extract()
+                    crcu16() <ee_u16 crcu16 (ee_u16 newval, ee_u16 crc) at CoreMark/Src/core_util.c:190>:
+                        crcu8() <ee_u16 crcu8 (ee_u8 data, ee_u16 crc) at CoreMark/Src/core_util.c:165>:
+            core_list_remove() <list_head *core_list_remove (list_head *item) at CoreMark/Src/core_list_join.c:377>:
+            crc16() <ee_u16 crc16 (ee_s16 newval, ee_u16 crc) at CoreMark/Src/core_util.c:204>:
+                crcu16() <ee_u16 crcu16 (ee_u16 newval, ee_u16 crc) at CoreMark/Src/core_util.c:190>:
+                    crcu8() <ee_u16 crcu8 (ee_u8 data, ee_u16 crc) at CoreMark/Src/core_util.c:165>:
+            core_list_undo_remove() <list_head *core_list_undo_remove (list_head *item_removed, list_head *item_modified) at CoreMark/Src/core_list_join.c:408>:
+            cmp_idx() <ee_s32 cmp_idx (list_data *a, list_data *b, core_results *res) at CoreMark/Src/core_list_join.c:134>:
+        crcu16() <ee_u16 crcu16 (ee_u16 newval, ee_u16 crc) at CoreMark/Src/core_util.c:190>:
+            crcu8() <ee_u16 crcu8 (ee_u8 data, ee_u16 crc) at CoreMark/Src/core_util.c:165>:
+    stop_time() <void stop_time (void) at CoreMark/Src/core_portme.c:99>:
+    time_in_secs() <secs_ret time_in_secs (CORE_TICKS ticks) at CoreMark/Src/core_portme.c:131>:
+    get_time() <CORE_TICKS get_time (void) at CoreMark/Src/core_portme.c:117>:
+        MYTIMEDIFF()
+    core_start_parallel()
+    core_stop_parallel()
+    crc16() <ee_u16 crc16 (ee_s16 newval, ee_u16 crc) at CoreMark/Src/core_util.c:204>:
+        crcu16() <ee_u16 crcu16 (ee_u16 newval, ee_u16 crc) at CoreMark/Src/core_util.c:190>:
+            crcu8() <ee_u16 crcu8 (ee_u8 data, ee_u16 crc) at CoreMark/Src/core_util.c:165>:
+    check_data_types() <ee_u8 check_data_types () at CoreMark/Src/core_util.c:210>:
+        ee_printf() <int ee_printf (const char *fmt, ...) at CoreMark/Src/ee_printf.c:667>:
+            va_start()
+            ee_vsprintf() <int ee_vsprintf (char *buf, const char *fmt, va_list args) at CoreMark/Src/ee_printf.c:464>:
+                is_digit()
+                skip_atoi() <int skip_atoi (const char **s) at CoreMark/Src/ee_printf.c:47>:
+                    is_digit()
+                va_arg()
+                strnlen() <ee_size_t strnlen (const char *s, ee_size_t count) at CoreMark/Src/ee_printf.c:38>:
+                number() <char *number (char *str, long num, int base, int size, int precision, int type) at CoreMark/Src/ee_printf.c:56>:
+                eaddr() <char *eaddr (char *str, unsigned char *addr, int size, int precision, int type) at CoreMark/Src/ee_printf.c:146>:
+                iaddr() <char *iaddr (char *str, unsigned char *addr, int size, int precision, int type) at CoreMark/Src/ee_printf.c:175>:
+                flt() <char *flt (char *str, double num, int size, int precision, char fmt, int flags) at CoreMark/Src/ee_printf.c:396>:
+                    parse_float() <void parse_float (double value, char *buffer, char fmt, int precision) at CoreMark/Src/ee_printf.c:234>:
+                        ecvtbuf() <char *ecvtbuf (double arg, int ndigits, int *decpt, int *sign, char *buf) at CoreMark/Src/cvt.c:112>:
+                            cvt() <char *cvt (double arg, int ndigits, int *decpt, int *sign, char *buf, int eflag) at CoreMark/Src/cvt.c:21>:
+                                modf()
+                        ee_bufcpy() <void ee_bufcpy (char *pd, char *ps, int count) at CoreMark/Src/ee_printf.c:226>
+                        fcvtbuf() <char *fcvtbuf (double arg, int ndigits, int *decpt, int *sign, char *buf) at CoreMark/Src/cvt.c:124>:
+                            cvt() <char *cvt (double arg, int ndigits, int *decpt, int *sign, char *buf, int eflag) at CoreMark/Src/cvt.c:21>:
+                                modf()
+                    decimal_point() <void decimal_point (char *buffer) at CoreMark/Src/ee_printf.c:345>:
+                        strnlen() <ee_size_t strnlen (const char *s, ee_size_t count) at CoreMark/Src/ee_printf.c:38>:
+                    cropzeros() <void cropzeros (char *buffer) at CoreMark/Src/ee_printf.c:375>
+                    strnlen() <ee_size_t strnlen (const char *s, ee_size_t count) at CoreMark/Src/ee_printf.c:38>:
+            va_end()
+            send_char() <void send_char (char c) at Core/Src/print_config.c:5>:
+                HAL_UART_Transmit() <HAL_StatusTypeDef HAL_UART_Transmit (UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_uart.c:1119>:
+                    HAL_IS_BIT_SET()
+                    CLEAR_BIT()
+                    HAL_GetTick() <__weak uint32_t HAL_GetTick (void) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal.c:346>:
+                    UART_WaitOnFlagUntilTimeout() <HAL_StatusTypeDef UART_WaitOnFlagUntilTimeout (UART_HandleTypeDef *huart, uint32_t Flag, FlagStatus Status, uint32_t Tickstart, uint32_t Timeout) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_uart.c:3491>:
+                        __HAL_UART_GET_FLAG()
+                        HAL_GetTick() <__weak uint32_t HAL_GetTick (void) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal.c:346>:
+                        READ_BIT()
+                        __HAL_UART_CLEAR_FLAG()
+                        UART_EndRxTransfer() <void UART_EndRxTransfer (UART_HandleTypeDef *huart) at Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_uart.c:3745>:
+                            ATOMIC_CLEAR_BIT()
+                        __HAL_UNLOCK()
+    portable_free()
+    portable_fini() <void portable_fini (core_portable *p) at CoreMark/Src/core_portme.c:167>
