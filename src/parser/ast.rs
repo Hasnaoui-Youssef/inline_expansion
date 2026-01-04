@@ -1,6 +1,6 @@
-use std::path::{Path, PathBuf};
+use std::{collections::HashSet, path::{Path, PathBuf}};
 
-use clang::{Clang, CompilationDatabase, Entity, EntityKind, Index, StorageClass};
+use clang::{Clang, CompilationDatabase, CompileCommand, Entity, EntityKind, Index, StorageClass};
 use anyhow::Result;
 
 
@@ -79,113 +79,137 @@ impl AstParser {
 
         Ok(AstParser {clang, compilation_db : db, project_root})
     }
-    pub fn parse_file(&self, file_path : &Path) -> Result<FunctionDatabase> {
-        // Make file path absolute before changing directory
-        let abs_file_path = if file_path.is_absolute() {
-            file_path.to_path_buf()
-        } else {
-            std::env::current_dir()?.join(file_path).canonicalize()
-                .map_err(|e| anyhow::anyhow!("Failed to resolve file path {}: {}", file_path.display(), e))?
-        };
+    //pub fn parse_file(&self, file_path : &Path) -> Result<FunctionDatabase> {
+    //    // Make file path absolute before changing directory
+    //    let abs_file_path = if file_path.is_absolute() {
+    //        file_path.to_path_buf()
+    //    } else {
+    //        std::env::current_dir()?.join(file_path).canonicalize()
+    //            .map_err(|e| anyhow::anyhow!("Failed to resolve file path {}: {}", file_path.display(), e))?
+    //    };
 
-        // Change to project directory so relative include paths work
-        let original_dir = std::env::current_dir()?;
-        std::env::set_current_dir(&self.project_root)?;
+    //    // Change to project directory so relative include paths work
+    //    let original_dir = std::env::current_dir()?;
+    //    std::env::set_current_dir(&self.project_root)?;
 
-        let result = self.parse_file_impl(&abs_file_path);
+    //    let result = self.parse_file_impl(&abs_file_path);
 
-        // Restore original directory
-        std::env::set_current_dir(original_dir)?;
+    //    // Restore original directory
+    //    std::env::set_current_dir(original_dir)?;
 
-        result
-    }
+    //    result
+    //}
 
-    fn parse_file_impl(&self, file_path : &Path) -> Result<FunctionDatabase> {
-        let comp_commands = self.compilation_db.get_compile_commands(file_path)
-            .map_err(|_| anyhow::anyhow!("Failed to get compile commands"))?;
-        let commands =  comp_commands.get_commands();
-        if commands.is_empty() {
-            anyhow::bail!(
-                "No compilation commands found for {} in the compilation database",
-                file_path.display()
-            );
-        }
-        let command = &commands[0];
-        let mut args = Self::extract_clang_compatible_flags(&command.get_arguments()[1..]);
+    fn parse_command_impl(&self, command : &CompileCommand, function_db : &mut FunctionDatabase, index : &Index) -> Result<()> {
+        let mut args = Self::extract_compatible_flags(&command.get_arguments()[1..]);
         args.push("-ferror-limit=0".to_string());
         args.push("-Wno-everything".to_string());
 
-        let index = Index::new(&self.clang, true, true);
+        let file_path = command.get_filename();
 
-        let tu_result = index.parser(file_path)
+        let tu_result = index.parser(&file_path)
             .arguments(&args)
             .skip_function_bodies(false)
             .detailed_preprocessing_record(true)
             .parse();
 
-        let tu = match tu_result {
-            Ok(tu) => {
-                tu
-            }
-            Err(e) => {
-                eprintln!("Parser failed with filtered args: {}", e);
-                eprintln!("Args used: {:?}", args);
-                let minimal_tu = index
-                    .parser(file_path)
-                    .arguments(&vec!["-ICore/Inc"])
-                    .parse()
-                    .map_err(|err| anyhow::anyhow!("Failed to parse {} : {}", file_path.display(), err))?;
+        if let Ok(tu) = tu_result {
+            let _ = self.collect_functions(&tu.get_entity(), function_db);
+        } else {
+            eprintln!("Warning: Failed to parse {}", file_path.display());
+            return Err(anyhow::anyhow!("Failed to parse {}", file_path.display()));
+        }
+        Ok(())
+    }
 
-                minimal_tu
-            }
+    fn parse_file_impl(&self, file_path : &Path, function_db : &mut FunctionDatabase, index : &Index, one_command_per_file : bool) -> Result<()> {
+        // Skip non-C files (like assembly)
+        let ext = file_path.extension().and_then(|e| e.to_str()).unwrap_or("");
+        if ext != "c" && ext != "h" {
+            return Ok(());
+        }
+
+        let binding = self.compilation_db.get_compile_commands(&file_path)
+            .map_err(|_| anyhow::anyhow!("Cannot find commands for {}", file_path.display()))?;
+        let commands = binding.get_commands();
+        if commands.len() == 0 {
+            return Ok(());
+        }
+        if one_command_per_file && commands.len() > 1{
+                return Err(anyhow::anyhow!(
+                        "One command per file set and we have multiple for {}",
+                        file_path.display()
+                        ));
+        }
+
+        for command in commands {
+            self.parse_command_impl(&command, function_db, index)?;
+        }
+        Ok(())
+    }
+
+    /// Parse all source files in the compilation database to build a complete function database
+    pub fn parse_all_files(&self, parse_all_commands : bool) -> Result<FunctionDatabase> {
+        let original_dir = std::env::current_dir()?;
+        std::env::set_current_dir(&self.project_root)?;
+
+        let result = if parse_all_commands {
+            self.parse_all_commands_impl()
+        }else {
+            self.parse_all_files_impl()
         };
 
-        let mut function_db = FunctionDatabase::new();
+        std::env::set_current_dir(original_dir)?;
+        result
+    }
 
-        self.collect_functions(&tu.get_entity(), &mut function_db)?;
+    fn parse_all_commands_impl(&self) -> Result<FunctionDatabase> {
+        let mut function_db = FunctionDatabase::new();
+        let index = Index::new(&self.clang, true, true);
+
+        let all_commands = self.compilation_db.get_all_compile_commands();
+        for command in all_commands.get_commands() {
+            match self.parse_command_impl(&command, &mut function_db, &index) {
+                Err(e) => {
+                    function_db.clear();
+                    return Err(e);
+                }
+                Ok(_) => {}
+            }
+        }
 
         Ok(function_db)
     }
 
-    /// Parse all source files in the compilation database to build a complete function database
-    pub fn parse_all_files(&self) -> Result<FunctionDatabase> {
-        let original_dir = std::env::current_dir()?;
-        std::env::set_current_dir(&self.project_root)?;
-
-        let result = self.parse_all_files_impl();
-
-        std::env::set_current_dir(original_dir)?;
-        result
+    fn normalize_path(path : &PathBuf, base_dir : &PathBuf) -> PathBuf {
+        if path.is_absolute() {
+            path.canonicalize().unwrap_or_else(|_| path.clone())
+        }else{
+            base_dir.join(path).canonicalize().unwrap_or_else(|_| base_dir.join(path) )
+        }
     }
 
     fn parse_all_files_impl(&self) -> Result<FunctionDatabase> {
         let mut function_db = FunctionDatabase::new();
         let index = Index::new(&self.clang, true, true);
 
+        let mut file_set : HashSet<PathBuf> = HashSet::new();
+        let curr_dir = std::env::current_dir()?;
+
         let all_commands = self.compilation_db.get_all_compile_commands();
-        for command in all_commands.get_commands() {
+        let commands = all_commands.get_commands();
+
+        for command in commands {
             let file_path = command.get_filename();
-            
-            // Skip non-C files (like assembly)
-            let ext = file_path.extension().and_then(|e| e.to_str()).unwrap_or("");
-            if ext != "c" && ext != "h" {
-                continue;
-            }
-
-            let mut args = Self::extract_clang_compatible_flags(&command.get_arguments()[1..]);
-            args.push("-ferror-limit=0".to_string());
-            args.push("-Wno-everything".to_string());
-
-            let tu_result = index.parser(&file_path)
-                .arguments(&args)
-                .skip_function_bodies(false)
-                .detailed_preprocessing_record(true)
-                .parse();
-
-            if let Ok(tu) = tu_result {
-                let _ = self.collect_functions(&tu.get_entity(), &mut function_db);
-            } else {
-                eprintln!("Warning: Failed to parse {}", file_path.display());
+            file_set.insert(AstParser::normalize_path(&file_path, &curr_dir));
+        }
+        for file in file_set {
+            match self.parse_file_impl(&file, &mut function_db, &index, true) {
+                Err(e) => {
+                    function_db.clear();
+                    return Err(e);
+                }
+                Ok(_) => {}
             }
         }
 
@@ -361,16 +385,11 @@ impl AstParser {
 
     /// Extract only -D (defines) and -I (includes) flags, which are the only ones
     /// that affect AST parsing. This avoids GCC/ARM-specific flag incompatibilities.
-    fn extract_clang_compatible_flags(args: &[String]) -> Vec<String> {
-        let mut filtered = Vec::new();
-
-        for arg in args {
-            if arg.starts_with("-D") || arg.starts_with("-I") {
-                filtered.push(arg.clone());
-            }
-        }
-
-        filtered
+    fn extract_compatible_flags(args: &[String]) -> Vec<String> {
+        args.iter()
+            .filter(|arg| arg.starts_with("-D") || arg.starts_with("-I"))
+            .map(|s| s.clone())
+            .collect()
     }
 
 }

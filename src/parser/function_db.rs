@@ -24,16 +24,13 @@ pub struct Definition {
     pub calls : Vec<CallInfo>,
 }
 
-/// Represents the context in which a function call occurs
 #[derive(Debug, Clone, PartialEq, Eq, Hash, Default)]
 pub enum CallContext {
     #[default]
     Sequential,
     /// Inside an if/else-if condition or body, with branch index
     Conditional { branch_id: u32 },
-    /// Inside a loop (while, for, do-while)
     Loop,
-    /// Inside a switch case
     Switch { case_id: u32 },
 }
 
@@ -45,14 +42,6 @@ pub struct CallInfo {
     pub order: u32,
     pub context: CallContext,
     pub context_depth: u32,
-}
-
-#[derive(Debug, Clone, PartialEq, Eq, Hash, Default)]
-pub struct Call{
-    pub function_name : String,
-    pub args : Vec<String>,
-    pub assigned_to : Option<String>,
-    pub line_number : usize,
 }
 
 #[derive(Debug, Clone, Default)]
@@ -75,26 +64,13 @@ impl FunctionDatabase {
         self.functions.get(name).cloned()
     }
 
-    pub fn iter(&self) -> impl Iterator<Item = Arc<Definition>> + '_ {
-        self.functions.values().cloned()
+    pub fn clear(&mut self) {
+        self.functions.clear();
+        self.functions.shrink_to(0);
     }
 
-    pub fn merge<'a, F>(&mut self, other : &FunctionDatabase, mut resolve : F)
-        where F : FnMut(Arc<Definition>, Arc<Definition>) -> Arc<Definition>,
-    {
-        use std::collections::hash_map::Entry;
-        for (k, v) in &other.functions {
-            match self.functions.entry(k.clone()) {
-                Entry::Vacant(e) => {
-                    e.insert(Arc::clone(v));
-                }
-                Entry::Occupied(mut e) => {
-                    let old = Arc::clone(e.get());
-                    let new = resolve(old, v.clone());
-                    e.insert(new);
-                }
-            }
-        }
+    pub fn iter(&self) -> impl Iterator<Item = Arc<Definition>> + '_ {
+        self.functions.values().cloned()
     }
 
 }
